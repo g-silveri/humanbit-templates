@@ -1,0 +1,48 @@
+// Copy and paste the following commented code on the desired anchor element.
+// @include scroll_offset($height_md, $max_height_extra, $max_height_md, $max_height_xs_landscape);
+
+// WARNING: does NOT work if the target has `display: flex` or `padding` set. On that case, make a wrapper.
+
+@mixin scroll_offset($height_md, $max_height_extra, $max_height_md, $max_height_xs_landscape) {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    :target::before {
+        content: "";
+        display: block;
+        height: $height_md; // Fixed header height.
+        margin: -$height_md 0 0; // Negative fixed header height.
+    }
+
+    @media (max-width: 991.98px) {
+        .container_humanbit_structure {
+			&.nav_extra {
+                :target::before {
+                    content: "";
+                    display: block;
+                    height: $max_height_extra; // Fixed header height.
+                    margin: -$max_height_extra 0 0; // Negative fixed header height.
+                }
+            }
+        }
+    }
+
+    @media (max-width: 767.98px) {
+        :target::before {
+            content: "";
+            display: block;
+            height: $max_height_md; // Fixed header height.
+            margin: -$max_height_md 0 0; // Negative fixed header height.
+        }
+    }
+
+    @media (max-height: 400px) and (orientation: landscape) {
+        :target::before {
+            content: "";
+            display: block;
+            height: $max_height_xs_landscape; // Fixed header height.
+            margin: -$max_height_xs_landscape 0 0; // Negative fixed header height.
+        }
+    }
+}

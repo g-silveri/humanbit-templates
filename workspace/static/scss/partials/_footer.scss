@@ -1,0 +1,377 @@
+
+ // footer partial
+
+.footer_partial {
+
+	@extend %modal_credits_module;
+
+	.sizing_wrapper {
+		min-height: $footer_min_height;
+
+		.footer_fill {
+			@include filling_effect($color_third, $color_third, $color_gray_medium, $color_third);
+		}
+
+		.logo_primary,
+		.logo_secondary {
+			max-height: 40px;
+		}
+
+		// Add class to icon to create spinning animation.
+		.social_icon_spin {
+			transition: .3s ease-in-out;
+
+			&:hover {
+				cursor: pointer;
+				opacity: .8;
+				transform: rotate(360deg) scale(1.25);
+			}
+		}
+	}
+
+	figure {
+		&:hover {
+			opacity: .8;
+			cursor: pointer;
+		}
+	}
+
+	// Navbar footer input background color variables.
+	$bg_color_primary: $color_second;
+	$bg_color_secondary: $color_third;
+
+	.nav_form {
+		// Generic wrapper.
+		div {
+			// <input> and <select> <<BEFORE/AFTER>> transition.
+			> .form-control,
+			> .form-select {
+				background-color: $bg_color_primary;
+				-webkit-animation-name: autofill-out-primary-nav;
+				-webkit-animation-duration: .15s;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-fill-mode: both;
+
+				// <input> and <select> <<DURING>> `:focus` state.
+				&:focus {
+					background-color: $bg_color_primary;
+					-webkit-animation-name: autofill-out-secondary-nav;
+					-webkit-animation-duration: .15s;
+					-webkit-animation-timing-function: ease-in-out;
+					-webkit-animation-fill-mode: both;
+				}
+			}
+
+			// <input>'s individual style <<BEFORE/AFTER>> transition.
+			> .form-control {
+				// <input>'s individual style (necessary for `div .form-control:not(:placeholder-shown)` state's transition effect).
+				// &:not(:-ms-input-placeholder),  // Selector fallback.
+				&:not(:placeholder-shown) {
+					background-color: $bg_color_primary;
+
+					// <input> <<DURING>> `div .form-control:not(:placeholder-shown):not(:focus)` state (necessary to set style <<AFTER>> `:focus` state is removed from <input>).
+					&:not(:focus) {
+						background-color: $bg_color_primary;
+						-webkit-animation-name: autofill-noPlace_noFocus-primary-nav;
+						-webkit-animation-duration: .15s;
+						-webkit-animation-timing-function: ease-in-out;
+						-webkit-animation-fill-mode: both;
+					}
+				}
+			}
+
+			@-webkit-keyframes autofill-in-primary-nav {
+				0%, 100% {
+					// color: $color_primary-nav;  // WebKit browsers only.
+					-webkit-text-fill-color: $color_white;  // WebKit browsers only.
+					-webkit-box-shadow: inset 0 0 0 30px rgba($bg_color_primary, 1);  // WebKit browsers only.
+				}
+			}
+
+			@-webkit-keyframes autofill-in-secondary-nav {
+				0%, 100% {
+					// color: $color_secondary-nav;  // WebKit browsers only.
+					-webkit-text-fill-color: $color_white;  // WebKit browsers only.
+					-webkit-box-shadow: inset 0 0 0 30px rgba($bg_color_primary, 1);  // WebKit browsers only.
+				}
+			}
+
+			@-webkit-keyframes autofill-noPlace_noFocus-primary-nav {
+				0% {
+					// -webkit-text-fill-color: $color_secondary-nav;  // WebKit browsers only.
+					color: $color_white;  // WebKit browsers only.
+					background-color: $bg_color_primary;  // WebKit browsers only.
+				}
+
+				100% {
+					// -webkit-text-fill-color: $color_primary-nav;  // WebKit browsers only.
+					color: $color_white;  // WebKit browsers only.
+					background-color: $bg_color_primary;  // WebKit browsers only.
+				}
+			}
+
+			@-webkit-keyframes autofill-out-primary-nav {
+				0%, 100% {
+					// -webkit-text-fill-color: $color_primary-nav;  // WebKit browsers only.
+					color: $color_white;  // WebKit browsers only.
+					background-color: $bg_color_primary;  // WebKit browsers only.
+				}
+			}
+
+			@-webkit-keyframes autofill-out-secondary-nav {
+				0%, 100% {
+					// -webkit-text-fill-color: $color_secondary-nav;  // WebKit browsers only.
+					color: $color_white;  // WebKit browsers only.
+					background-color: $bg_color_primary;  // WebKit browsers only.
+				}
+			}
+		}
+
+		// Wrapper class (necessary to overlap the standard <form>'s style).
+		.form-floating {
+			// <input> and <select> <<BEFORE/AFTER>> transition.
+			> .form-control,
+			> .form-select {
+				background-color: $bg_color_primary;
+
+				// <input> and <select> <<DURING>> `:focus` state.
+				&:focus {
+					// <label> <<DURING>> `.form-floating > .form-control:focus, .form-floating > .form-select:focus` state.
+					~ label {
+						background-color: $bg_color_primary;
+					}
+				}
+			}
+
+			// <input>'s individual style <<BEFORE/AFTER>> transition.
+			> .form-control {
+				// <input>'s individual style (necessary for `.form-floating .form-control:not(:placeholder-shown)` state's transition effect).
+				&:not(:placeholder-shown) {
+					// <label> <<DURING>> `.form-floating .form-control:not(:placeholder-shown):not(:focus)` state (necessary to set style <<AFTER>> `:focus` state is removed from <input>).
+					~ label {
+						background-color: $bg_color_primary;
+					}
+
+					// <input> <<DURING>> `.form-floating .form-control:not(:placeholder-shown):not(:focus)` state (necessary to set style <<AFTER>> `:focus` state is removed from <input>).
+					&:not(:focus) {
+						// <label> <<DURING>> `.form-floating .form-control:not(:placeholder-shown):not(:focus)` state (necessary to set style <<AFTER>> `:focus` state is removed from <input>).
+						~ label {
+							// color: $color_secondary;
+							background-color: $bg_color_secondary;
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
+
+
+
+/////////
+////////
+/*///// ==================== @media ==================== */
+//////
+/////
+
+		// ------------------ //
+
+	  ////////////////////////
+	 /* @media (max-width) */
+	////////////////////////
+
+	@media (max-width: 1399.98px) {
+
+		.footer_partial {
+
+
+
+		}
+
+	}
+
+	@media (max-width: 1199.98px) {
+
+		.footer_partial {
+
+
+
+		}
+
+	}
+
+	@media (max-width: 991.98px) {
+
+		.footer_partial {
+
+
+
+		}
+
+	}
+
+	@media (max-width: 767.98px) {
+
+		.footer_partial {
+
+
+
+		}
+
+
+
+	}
+
+	@media (max-width: 575.98px) {
+
+		.footer_partial{
+
+
+
+		}
+
+	}
+
+		// -------------- //
+
+	  ////////////////////
+	 /* @media between */
+	////////////////////
+
+	@media (min-width: 576px) and (max-width: 767.98px) {
+
+		.footer_partial {
+
+
+
+		}
+
+	}
+
+	@media (min-width: 576px) and (max-width: 991.98px) {
+
+		.footer_partial {
+
+
+
+		}
+
+	}
+
+	@media (min-width: 768px) and (max-width: 991.98px) {
+
+		.footer_partial {
+
+
+
+		}
+
+	}
+
+	@media (min-width: 992px) and (max-width: 1199.98px){
+
+		.footer_partial {
+
+
+
+		}
+
+	}
+
+	@media (min-width: 1200px) and (max-width: 1399.98px) {
+
+		.footer_partial {
+
+
+
+		}
+
+	}
+
+		// ------------------ //
+
+	  ////////////////////////
+	 /* @media (min-width) */
+	////////////////////////
+
+	@media (min-width: 576px) {
+
+		.footer_partial {
+
+
+
+		}
+
+	}
+
+	@media (min-width: 768px) {
+
+		.footer_partial {
+
+
+
+		}
+
+	}
+
+	@media (min-width: 992px) {
+
+		.footer_partial  {
+
+
+
+		}
+
+	}
+
+	@media (min-width: 1200px) {
+
+		.footer_partial  {
+
+
+
+		}
+
+	}
+
+	@media (min-width: 1400px) {
+
+		.footer_partial  {
+
+
+
+		}
+
+	}
+
+		// ---------------- //
+
+	  //////////////////////
+	 /* mobile landscape */
+	//////////////////////
+
+	@media (max-height: 400px) and (orientation: landscape) {
+
+		.footer_partial  {
+
+
+
+		}
+
+	}
+
+		// ----------------- //
+
+	  ///////////////////////
+	 /* iPad Pro portrait */
+	///////////////////////
+
+	@media (width: 1024px) and (height: 1366px) {
+
+		.footer_partial {
+
+
+		}
+
+	}

@@ -1,0 +1,233 @@
+  //
+ // slide hero home
+//
+%hero_html5_module{
+	.hero_html5_module {
+
+		.hero_rmg {
+			height: 100vh;
+			overflow: hidden;
+		}
+
+		.hero_rmg_div {
+			height: 100vh;
+			overflow: hidden;
+			position: relative;
+			z-index: 0;
+			right: 0;
+			top: 0;
+			left: 0;
+		}
+
+		video{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			overflow: hidden;
+			z-index: -998;
+			width: auto !important;
+			height: 150% !important;
+		}
+
+	}
+
+	// ------------------ //
+
+			  ////////////////////////
+			 /* @media (max-width) */
+			////////////////////////
+
+			@media (max-width: 1399.98px) {
+
+				.hero_html5_module {
+
+
+
+				}
+
+			}
+
+			@media (max-width: 1199.98px) {
+
+				.hero_html5_module {
+
+
+
+				}
+
+			}
+
+			@media (max-width: 991.98px) {
+
+				.hero_html5_module {
+
+
+
+				}
+
+			}
+
+			@media (max-width: 767.98px) {
+
+				.hero_html5_module {
+
+
+
+				}
+
+			}
+
+			@media (max-width: 575.98px) {
+
+				.hero_html5_module {
+
+
+
+				}
+
+			}
+
+				// -------------- //
+
+			  ////////////////////
+			 /* @media between */
+			////////////////////
+
+			@media (min-width: 576px) and (max-width: 767.98px) {
+
+				.hero_html5_module {
+
+
+
+				}
+
+			}
+
+			@media (min-width: 576px) and (max-width: 991.98px) {
+
+				.hero_html5_module {
+
+
+
+				}
+
+			}
+
+			@media (min-width: 768px) and (max-width: 991.98px) {
+
+				.hero_html5_module {
+
+
+
+				}
+
+			}
+
+			@media (min-width: 992px) and (max-width: 1199.98px) {
+
+				.hero_html5_module {
+
+
+
+				}
+
+			}
+
+			@media (min-width: 1200px) and (max-width: 1399.98px) {
+
+				.hero_html5_module {
+
+
+
+				}
+
+			}
+
+				// ------------------ //
+
+			  ////////////////////////
+			 /* @media (min-width) */
+			////////////////////////
+
+			@media (min-width: 576px) {
+
+				.hero_html5_module {
+
+
+
+				}
+
+			}
+
+			@media (min-width: 768px) {
+
+				.hero_html5_module {
+
+
+
+				}
+
+			}
+
+			@media (min-width: 992px) {
+
+				.hero_html5_module {
+
+
+
+				}
+
+			}
+
+			@media (min-width: 1200px) {
+
+				.hero_html5_module {
+
+
+
+				}
+
+			}
+
+			@media (min-width: 1400px) {
+
+				.hero_html5_module {
+
+
+
+				}
+
+			}
+
+				// ---------------- //
+
+			  //////////////////////
+			 /* mobile landscape */
+			//////////////////////
+
+			@media (max-height: 400px) and (orientation: landscape) {
+
+				.hero_html5_module {
+
+
+
+				}
+
+			}
+
+				// ----------------- //
+
+			  ///////////////////////
+			 /* iPad Pro portrait */
+			///////////////////////
+
+			@media (width: 1024px) and (height: 1366px) {
+
+				.hero_html5_module {
+
+
+
+				}
+
+			}
+}

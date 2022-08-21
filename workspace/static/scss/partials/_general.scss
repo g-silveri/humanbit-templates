@@ -1,0 +1,1223 @@
+  //
+ // general partial
+//
+
+body {
+	font-family: "Open Sans", sans-serif;
+	font-size:	1rem;
+	line-height: 1.5;
+	font-weight: 400;
+	color: $color_black;
+	margin: 0;
+	overflow-x: hidden;
+	// transition: none !important;
+}
+
+
+// Scrollbar customization <<IN>>.
+//
+// See https://blog.shahednasser.com/how-to-style-a-scrollbar-with-css
+
+// User Agents must apply any scrollbar-color value set on the root element to the viewport.
+:root { // Mozilla Firefox.
+	// First passed value corresponds to the thumb and the second one to the background.
+	scrollbar-color: $color_second rgba($color_first, .8);
+	scrollbar-width: thin;
+}
+
+::-webkit-scrollbar { // Background.
+	background-color: $color_first;
+	width: 8.5px;
+}
+
+::-webkit-scrollbar-button {
+	display: none; // Hides arrows.
+	background-color: $color_second;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	border-radius: 50rem;
+
+	&:vertical:start {
+		background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/6b/Font_Awesome_5_solid_chevron-up.svg");
+		background-size: 50%;
+	}
+
+	&:vertical:end {
+		background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/73/Font_Awesome_5_solid_chevron-down.svg");
+		background-size: 50%;
+	}
+
+	&:horizontal:start {
+		background-image: url("https://upload.wikimedia.org/wikipedia/commons/b/b8/Font_Awesome_5_solid_chevron-left.svg");
+		background-size: 35%;
+	}
+
+	&:horizontal:end {
+		background-image: url("https://upload.wikimedia.org/wikipedia/commons/9/9d/Font_Awesome_5_solid_chevron-right.svg");
+		background-size: 35%;
+	}
+}
+
+::-webkit-scrollbar-thumb { // Thumb.
+	background-color: $color_second;
+	border-radius: 50rem;
+}
+
+// Deeper layer than ::-webkit-scrollbar-track-piece.
+// ::-webkit-scrollbar-track { // Background.
+// 	background-color: rgba($color_second, .3);
+// 	border-radius: 50rem;
+// }
+
+// Higher layer than ::-webkit-scrollbar-track.
+::-webkit-scrollbar-track-piece { // Background.
+	background-color: rgba($color_first, .3);
+	border-radius: 50rem;
+}
+
+::-webkit-scrollbar-corner {
+	background-color: $color_first;
+}
+
+::-webkit-resizer {
+	background-color: $color_third;
+}
+// Scrollbar customization. <<OUT>>
+
+// Add following class for fullscreen modals under navbar
+.modal_full {
+	top: $height_md; // `_variables.scss`
+	height: calc(100vh - $height_md); // `_variables.scss`
+}
+
+
+// Selection. <<IN>>
+::-moz-selection { // Firefox.
+	color: $color_white;
+	background-color: $color_first;
+}
+
+::selection {
+	color: $color_white;
+	background-color: $color_first;
+}
+// Selection. <<OUT>>
+
+
+.opacity_0{
+	opacity: 0;
+}
+
+.opacity_1{
+	opacity: 1;
+}
+
+
+////
+/// ---------- Fonts ---------- ///
+//
+
+//-------------//
+// font-family //
+//-------------//
+
+.open_sans {
+	font-family: "Open Sans", sans-serif;
+}
+
+.oswald {
+	font-family: "Oswald", sans-serif;
+}
+
+
+//-----------------------------------
+// @mixin for responsive font-size //
+//-----------------------------------
+
+// @include fluid-type($min_width, $max_width, $min_font, $max_font);
+
+// `font-size` must be set at XX% of Figma's value.
+
+h1, .h1 {
+	@include fluid-type(20em, 100em, 1.73rem, 2.5rem);
+	word-break: break-word;
+	line-height: 1.3;
+}
+
+h2, .h2 {
+	@include fluid-type(20em, 100em, 1.54rem, 2rem);
+	word-break: break-word;
+	line-height: 1.3;
+}
+
+h3, .h3 {
+	@include fluid-type(20em, 100em, 1.44rem, 1.75rem);
+	word-break: break-word;
+	line-height: 1.3;
+}
+
+h4, .h4 {
+	@include fluid-type(20em, 100em, 1.35rem, 1.5rem);
+	word-break: break-word;
+	line-height: 1.3;
+}
+
+h5, .h5 {
+	@include fluid-type(20em, 100em, 1.25rem, 1.25rem);
+	word-break: break-word;
+	line-height: 1.3;
+}
+
+h6, .h6 {
+	@include fluid-type(20em, 100em, 1rem, 1rem);
+	word-break: break-word;
+	line-height: 1.3;
+}
+
+p, .p {
+	@include fluid-type(20em, 100em, 1rem, 1rem);
+	word-break: break-word;
+	line-height: 1.3;
+}
+
+.big {
+	@include fluid-type(20em, 100em, 1.8rem, 2.25rem);
+	font-weight: 300;
+	line-height: 1.3;
+}
+
+.medium {
+	@include fluid-type(20em, 100em, 1.2rem, 1.3rem);
+	font-weight: 200;
+	line-height: 1.3;
+}
+
+small, .small {
+	@include fluid-type(20em, 100em, 0.875rem, 0.875rem);
+	word-break: break-word;
+	line-height: 1.3;
+}
+
+select,
+select.form-select,
+input:not([type="checkbox"]):not([type="radio"]),
+.input,
+label,
+.label,
+.form-check-label {  // 18px/1.13rem - light (300)/regular (400)/medium (500)
+	@include fluid-type(20em, 100em, 1.13rem, 1.13rem);
+	// font-weight: 300;
+	// font-weight: 400;
+	// font-weight: 500;
+	// line-height: 18px;
+	line-height: 1.3;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	font-size: inherit;
+	line-height: inherit;
+}
+
+
+.fw_100 { font-weight: $fw_100; }
+.fw_200 { font-weight: $fw_200; }
+.fw_300 { font-weight: $fw_300; }
+.fw_400 { font-weight: $fw_400; }
+.fw_500 { font-weight: $fw_500; }
+.fw_600 { font-weight: $fw_600; }
+.fw_700 { font-weight: $fw_700; }
+.fw_800 { font-weight: $fw_800; }
+.fw_900 { font-weight: $fw_900; }
+
+
+@include form-mixin($color_primary, $color_secondary, $color_file, $bg_color_primary, $bg_color_secondary, $bg_color_file, $border, $border_focus_color, $check_radius_standard, $radius_standard, $radius_transformed, $focus_box_shadow);
+// @include form-mixin($color_primary, $color_secondary, $bg_color_primary, $bg_color_secondary, $border, $border_focus_color, $check_radius_standard, $radius_standard, $radius_transformed, $focus_box_shadow);
+
+// Used on registration.xsl
+.reg_fill {
+	@include filling_effect($color_sixth, $color_sixth, $color_gray_medium, $color_sixth);
+}
+
+// Anchor scroll offset to compensate for navbar height
+@include scroll_offset($height_md, $max_height_extra, $max_height_md, $max_height_xs_landscape);
+
+
+////
+/// ---------- Colors ---------- ///
+//
+
+//------//
+// Gray //
+//------//
+
+.color_grayer {
+	color: $color_gray_dark;
+}
+
+.bg_color_grayer {
+	background-color: $color_gray_dark;
+}
+
+.border_color_grayer {
+	border-color: $color_gray_dark !important;
+}
+
+//-------//
+// Black //
+//-------//
+
+.color_black {
+	color: $color_black;
+}
+
+.bg_color_black {
+	background-color: $color_black;
+}
+
+.border_color_black {
+	border-color: $color_black !important;
+}
+
+//-------//
+// White //
+//-------//
+
+.color_white {
+	color: $color_white;
+}
+
+.bg_color_white {
+	background-color: $color_white;
+}
+
+.border_color_white {
+	border-color: $color_white !important;
+}
+
+//--------------//
+// $color_first //
+//--------------//
+
+.color_first {
+	color: $color_first;
+}
+
+.bg_color_first {
+	background-color: $color_first;
+}
+
+.border_color_first {
+	border-color: $color_first !important;
+}
+
+//---------------//
+// $color_second //
+//---------------//
+
+.color_second{
+	color: $color_second;
+}
+
+.bg_color_second {
+	background-color: $color_second;
+}
+
+.border_color_second {
+	border-color: $color_second !important;
+}
+
+//--------------//
+// $color_third //
+//--------------//
+
+.color_third {
+	color: $color_third;
+}
+
+.bg_color_third {
+	background-color: $color_third;
+}
+
+.border_color_third {
+	border-color: $color_third !important;
+}
+
+//---------------//
+// $color_fourth //
+//---------------//
+
+.color_fourth {
+	color: $color_fourth;
+}
+
+.bg_color_fourth {
+	background-color: $color_fourth;
+}
+
+.border_color_fourth {
+	border-color: $color_fourth !important;
+}
+
+//--------------//
+// $color_fifth //
+//--------------//
+
+.color_fifth {
+	color: $color_fifth;
+}
+
+.bg_color_fifth {
+	background-color: $color_fifth;
+}
+
+.border_color_fifth {
+	border-color: $color_fifth !important;
+}
+
+//--------------//
+// $color_sixth //
+//--------------//
+
+.color_sixth {
+	color: $color_sixth;
+}
+
+.bg_color_sixth {
+	background-color: $color_sixth;
+}
+
+.border_color_sixth {
+	border-color: $color_sixth !important;
+}
+
+//----------------//
+// $color_seventh //
+//----------------//
+
+.color_seventh {
+	color: $color_seventh;
+}
+
+.bg_color_seventh {
+	background-color: $color_seventh;
+}
+
+.border_color_seventh {
+	border-color: $color_seventh !important;
+}
+
+//---------------//
+// $color_eighth //
+//---------------//
+
+.color_eighth {
+	color: $color_eighth;
+}
+
+.bg_color_eighth {
+	background-color: $color_eighth;
+}
+
+.border_color_eighth {
+	border-color: $color_eighth !important;
+}
+
+//--------------//
+// $color_ninth //
+//--------------//
+
+.color_ninth {
+	color: $color_ninth;
+}
+
+.bg_color_ninth {
+	background-color: $color_ninth;
+}
+
+.border_color_ninth {
+	border-color: $color_ninth !important;
+}
+
+//--------------//
+// $color_tenth //
+//--------------//
+
+.color_tenth {
+	color: $color_tenth;
+}
+
+.bg_color_tenth {
+	background-color: $color_tenth;
+}
+
+.border_color_tenth {
+	border-color: $color_tenth !important;
+}
+
+
+//--------//
+// Social //
+//--------//
+
+// Facebook
+.bg_color_facebook {
+	background-color: $color_facebook;
+}
+
+// Twitter
+.bg_color_twitter {
+	background-color: $color_twitter;
+}
+
+// LinkedIn
+.bg_color_linkedin {
+	background-color: $color_linkedin;
+}
+
+// Email
+.bg_color_email {
+	background-color: $color_email;
+}
+
+// WhatsApp
+.bg_color_whatsapp {
+	background-color: $color_whatsapp;
+}
+
+
+////
+/// ---------- Buttons ---------- ///
+//
+
+// Style reset so as to make it possible to pass external icons (such as FontAwesome).
+.btn-close {
+	background-image: none;
+}
+
+// All buttons.
+.btn_reset,
+.btn_reverse,
+.btn_color_white,
+.btn_bg_white,
+.btn_color_black,
+.btn_bg_black,
+.btn_color_first,
+.btn_bg_first,
+.btn_color_second,
+.btn_bg_second,
+.btn_color_third,
+.btn_bg_third,
+.btn_color_fourth,
+.btn_bg_fourth,
+.btn_color_fifth,
+.btn_bg_fifth,
+.btn_color_sixth,
+.btn_bg_sixth {
+	text-transform: uppercase;
+	-webkit-transition: all .13s ease-in-out !important;
+	transition: all .13s ease-in-out !important;
+
+	// And all their children.
+	> * {
+		-webkit-transition: all .13s ease-in-out !important;
+    	transition: all .13s ease-in-out !important;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color_white;
+		background-color: $color_third;
+		border-color: $color_third;
+		opacity: unset;
+		cursor: pointer;
+	}
+
+	&.btn_reverse {
+		&:hover,
+		&:focus,
+		&:active {
+			color: $color_white;
+			background-color: transparent;
+			border-color: $color_white;
+			opacity: unset;
+			cursor: pointer;
+		}
+	}
+}
+
+.btn_reset {
+	font-family: "IBM Plex Sans", sans-serif;
+	font-size: .88rem;
+	font-weight: 700;
+	text-align: center;
+	// width: fit-content;
+	height: fit-content;
+	color: $color_white;
+	background-color: transparent;
+	border: 2px solid transparent;
+	border-radius: 15px;
+	padding: 1rem 1rem;
+}
+
+.btn_color_black {
+	font-family: "IBM Plex Sans", sans-serif;
+	font-size: .88rem;
+	font-weight: 700;
+	text-align: center;
+	// width: fit-content;
+	height: fit-content;
+	color: $color_black;
+	background-color: transparent;
+	border: 2px solid $color_black;
+	border-radius: 15px;
+	padding: 1rem 1rem;
+}
+
+.btn_bg_black {
+	font-family: "IBM Plex Sans", sans-serif;
+	font-size: .88rem;
+	font-weight: 700;
+	text-align: center;
+	// width: fit-content;
+	height: fit-content;
+	color: inherit;
+	background-color: $color_black;
+	border: 2px solid $color_black;
+	border-radius: 15px;
+	padding: 1rem 1rem;
+}
+
+.btn_color_white {
+	font-family: "IBM Plex Sans", sans-serif;
+	font-size: .88rem;
+	font-weight: 700;
+	text-align: center;
+	// width: fit-content;
+	height: fit-content;
+	color: $color_white;
+	background-color: transparent;
+	border: 2px solid $color_white;
+	border-radius: 15px;
+	padding: 1rem 1rem;
+}
+
+.btn_bg_white {
+	font-family: "IBM Plex Sans", sans-serif;
+	font-size: .88rem;
+	font-weight: 700;
+	text-align: center;
+	// width: fit-content;
+	height: fit-content;
+	color: black;
+	background-color: $color_white;
+	border: 2px solid $color_white;
+	border-radius: 15px;
+	padding: 1rem 1rem;
+}
+
+.btn_color_first {
+	font-family: "IBM Plex Sans", sans-serif;
+	font-size: .88rem;
+	font-weight: 700;
+	text-align: center;
+	// width: fit-content;
+	height: fit-content;
+	color: $color_first;
+	background-color: $color_white;
+	border: 2px solid $color_white;
+	border-radius: 15px;
+	padding: 1rem 1rem;
+}
+
+.btn_bg_first {
+	font-family: "IBM Plex Sans", sans-serif;
+	font-size: .88rem;
+	font-weight: 700;
+	text-align: center;
+	// width: fit-content;
+	height: fit-content;
+	color: $color_white;
+	background-color: $color_first;
+	border: 2px solid $color_first;
+	border-radius: 15px;
+	padding: 1rem 1rem;
+}
+
+.btn_color_second {
+	font-family: "IBM Plex Sans", sans-serif;
+	font-size: .88rem;
+	font-weight: 700;
+	text-align: center;
+	// width: fit-content;
+	height: fit-content;
+	color: $color_second;
+	background-color: $color_white;
+	border: 2px solid $color_second;
+	border-radius: 15px;
+	padding: 1rem 1rem;
+}
+
+.btn_bg_second {
+	font-family: "IBM Plex Sans", sans-serif;
+	font-size: .88rem;
+	font-weight: 700;
+	text-align: center;
+	// width: fit-content;
+	height: fit-content;
+	color: $color_black;
+	background-color: $color_second;
+	border: 2px solid $color_second;
+	border-radius: 15px;
+	padding: 1rem 1rem;
+}
+
+.btn_color_third {
+	font-family: "IBM Plex Sans", sans-serif;
+	font-size: .88rem;
+	font-weight: 700;
+	text-align: center;
+	// width: fit-content;
+	height: fit-content;
+	color: $color_white;
+	background-color: $color_third;
+	border: 2px solid $color_third;
+	border-radius: 15px;
+	padding: 1rem 1rem;
+}
+
+.btn_bg_third {
+	font-family: "IBM Plex Sans", sans-serif;
+	font-size: .88rem;
+	font-weight: 700;
+	text-align: center;
+	// width: fit-content;
+	height: fit-content;
+	color: $color_white;
+	background-color: $color_third;
+	border: 2px solid $color_third;
+	border-radius: 15px;
+	padding: 1rem 1rem;
+}
+
+.btn_color_fourth {
+	font-family: "IBM Plex Sans", sans-serif;
+	font-size: .88rem;
+	font-weight: 700;
+	text-align: center;
+	// width: fit-content;
+	height: fit-content;
+	color: $color_white;
+	background-color: $color_fourth;
+	border: 2px solid $color_fourth;
+	border-radius: 15px;
+	padding: 1rem 1rem;
+}
+
+.btn_bg_fourth {
+	font-family: "IBM Plex Sans", sans-serif;
+	font-size: .88rem;
+	font-weight: 700;
+	text-align: center;
+	// width: fit-content;
+	height: fit-content;
+	color: $color_white;
+	background-color: $color_fourth;
+	border: 2px solid $color_fourth;
+	border-radius: 15px;
+	padding: 1rem 1rem;
+}
+
+.btn_color_fifth {
+	font-family: "IBM Plex Sans", sans-serif;
+	font-size: .88rem;
+	font-weight: 700;
+	text-align: center;
+	// width: fit-content;
+	height: fit-content;
+	color: $color_white;
+	background-color: $color_fifth;
+	border: 2px solid $color_fifth;
+	border-radius: 15px;
+	padding: 1rem 1rem;
+}
+
+.btn_bg_fifth {
+	font-family: "IBM Plex Sans", sans-serif;
+	font-size: .88rem;
+	font-weight: 700;
+	text-align: center;
+	// width: fit-content;
+	height: fit-content;
+	color: $color_white;
+	background-color: $color_fifth;
+	border: 2px solid $color_fifth;
+	border-radius: 15px;
+	padding: 1rem 1rem;
+}
+
+.btn_color_sixth {
+	font-family: "IBM Plex Sans", sans-serif;
+	font-size: .88rem;
+	font-weight: 700;
+	text-align: center;
+	// width: fit-content;
+	height: fit-content;
+	color: $color_white;
+	background-color: $color_sixth;
+	border: 2px solid $color_sixth;
+	border-radius: 15px;
+	padding: 1rem 1rem;
+}
+
+.btn_bg_sixth {
+	font-family: "IBM Plex Sans", sans-serif;
+	font-size: .88rem;
+	font-weight: 700;
+	text-align: center;
+	// width: fit-content;
+	height: fit-content;
+	color: $color_white;
+	background-color: $color_sixth;
+	border: 2px solid $color_sixth;
+	border-radius: 15px;
+	padding: 1rem 1rem;
+}
+
+.btn_color_seventh {
+	font-family: "IBM Plex Sans", sans-serif;
+	font-size: .88rem;
+	font-weight: 700;
+	text-align: center;
+	// width: fit-content;
+	height: fit-content;
+	color: $color_white;
+	background-color: $color_seventh;
+	border: 2px solid $color_seventh;
+	border-radius: 15px;
+	padding: 1rem 1rem;
+}
+
+.btn_bg_seventh {
+	font-family: "IBM Plex Sans", sans-serif;
+	font-size: .88rem;
+	font-weight: 700;
+	text-align: center;
+	// width: fit-content;
+	height: fit-content;
+	color: $color_white;
+	background-color: $color_seventh;
+	border: 2px solid $color_seventh;
+	border-radius: 15px;
+	padding: 1rem 1rem;
+}
+
+.btn_color_eighth {
+	font-family: "IBM Plex Sans", sans-serif;
+	font-size: .88rem;
+	font-weight: 700;
+	text-align: center;
+	// width: fit-content;
+	height: fit-content;
+	color: $color_white;
+	background-color: $color_eighth;
+	border: 2px solid $color_eighth;
+	border-radius: 15px;
+	padding: 1rem 1rem;
+}
+
+.btn_bg_eighth {
+	font-family: "IBM Plex Sans", sans-serif;
+	font-size: .88rem;
+	font-weight: 700;
+	text-align: center;
+	// width: fit-content;
+	height: fit-content;
+	color: $color_white;
+	background-color: $color_eighth;
+	border: 2px solid $color_eighth;
+	border-radius: 15px;
+	padding: 1rem 1rem;
+}
+
+.btn_color_ninth {
+	font-family: "IBM Plex Sans", sans-serif;
+	font-size: .88rem;
+	font-weight: 700;
+	text-align: center;
+	// width: fit-content;
+	height: fit-content;
+	color: $color_white;
+	background-color: $color_ninth;
+	border: 2px solid $color_ninth;
+	border-radius: 15px;
+	padding: 1rem 1rem;
+}
+
+.btn_bg_ninth {
+	font-family: "IBM Plex Sans", sans-serif;
+	font-size: .88rem;
+	font-weight: 700;
+	text-align: center;
+	// width: fit-content;
+	height: fit-content;
+	color: $color_white;
+	background-color: $color_ninth;
+	border: 2px solid $color_ninth;
+	border-radius: 15px;
+	padding: 1rem 1rem;
+}
+
+.btn_color_tenth {
+	font-family: "IBM Plex Sans", sans-serif;
+	font-size: .88rem;
+	font-weight: 700;
+	text-align: center;
+	// width: fit-content;
+	height: fit-content;
+	color: $color_white;
+	background-color: $color_tenth;
+	border: 2px solid $color_tenth;
+	border-radius: 15px;
+	padding: 1rem 1rem;
+}
+
+.btn_bg_tenth {
+	font-family: "IBM Plex Sans", sans-serif;
+	font-size: .88rem;
+	font-weight: 700;
+	text-align: center;
+	// width: fit-content;
+	height: fit-content;
+	color: $color_white;
+	background-color: $color_tenth;
+	border: 2px solid $color_tenth;
+	border-radius: 15px;
+	padding: 1rem 1rem;
+}
+
+
+////
+/// ---------- Box ---------- ///
+//
+
+* {
+	box-sizing: border-box;
+}
+
+*:not(.modal):hover {
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+	opacity: 0.8;
+}
+
+ul {
+	list-style: none;
+}
+
+
+////
+/// ---------- Containers ---------- ///
+//
+
+// container humanbit overflow: put here modules that has to funcion along the whole site and not only in specific pages (for ex modal credits)
+.container_humanbit_overflow {
+	@extend %modal_credits_module;
+	// Necessary to avoid showing internal scrollbar in certain cases.
+	overflow: hidden;
+}
+
+.container_humanbit_structure {
+	min-height: calc(100vh - calc($height_md + $footer_min_height)); // `_variables.scss`
+	margin-top: $height_md; // `_variables.scss`
+}
+
+.full_height {
+	min-height: calc(100vh - $height_md); // `_variables.scss`
+}
+
+.container_humanbit_1 {
+	// padding: 2.5rem 4.5rem;
+	padding-right: 4.5rem;
+	padding-left: 4.5rem;
+}
+
+.container_humanbit_2 {
+	// padding: 5rem 3rem;
+	padding-right: 3rem;
+	padding-left: 3rem;
+}
+
+.container_max_width_1 {
+	margin: 0 auto;
+	// margin-right: auto;
+	// margin-left: auto;
+	max-width: 1500px;
+}
+
+.container_max_width_2 {
+	margin: 0 auto;
+	// margin-right: auto;
+	// margin-left: auto;
+	max-width: 920px;
+}
+
+////
+/// ---------- move translates in (function in main-humanbit.js ) ---------- ///
+//
+
+.viewport {
+	transition: all 1s ease-in-out;
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	transform: matrix(1, 0, 0, 1, 0, 100);
+	opacity: 0;
+}
+
+.viewport.viewport_right {
+	transition: all 1s ease-in-out;
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	transform: matrix(1, 0, 0, 1, 200, 0);
+	opacity: 0;
+}
+
+.viewport.viewport_left {
+	transition: all 1s ease-in-out;
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	transform: matrix(1, 0, 0, 1, -200, 0);
+	opacity: 0;
+}
+
+
+
+.viewport.viewport_total_left {
+	transition: all 1s ease-in-out;
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	transform: matrix(1, 0, 0, 1, -2000, 0);
+	opacity: 0.5;
+}
+
+.viewport.viewport_total_right {
+	transition: all 1.5s ease-in-out;
+	-webkit-transition: all 1.5s ease-in-out;
+	-moz-transition: all 1.5s ease-in-out;
+	transform: matrix(1, 0, 0, 1, 2000, 0);
+	opacity: 0.5;
+}
+
+.viewport.viewport_small_y_rotate {
+	transition: all 2s ease-in-out;
+	-webkit-transition: all 2s ease-in-out;
+	-moz-transition: all 2s ease-in-out;
+	transform: matrix(1, 0, 80, 1, 0, 0);
+	opacity: 0;
+}
+
+.viewport.viewport_big_y {
+	transition: all 2s ease-in-out;
+	-webkit-transition: all 2s ease-in-out;
+	-moz-transition: all 2s ease-in-out;
+	transform: matrix(1, 0, 0, 1, 0, 0);
+	opacity: 0;
+}
+
+////
+/// ---------- move translates out ---------- ///
+//
+
+
+
+/////////
+////////
+/*///// ==================== @media ==================== */
+//////
+/////
+
+		// ------------------ //
+
+	  ////////////////////////
+	 /* @media (max-width) */
+	////////////////////////
+
+	@media (max-width: 1399.98px) {
+
+
+
+	}
+
+	@media (max-width: 1199.98px) {
+
+
+
+	}
+
+	@media (max-width: 991.98px) {
+
+		.container_humanbit_structure {
+			&.nav_extra {
+				min-height: calc(100vh - calc($max_height_extra + $footer_min_height)); // `_variables.scss`
+				margin-top: $max_height_extra; // `_variables.scss`
+
+				.full_height {
+					min-height: calc(100vh - $max_height_extra); // `_variables.scss`
+				}
+
+				.modal_full {
+					top: $max_height_extra; // `_variables.scss`
+					height: calc(100vh - $max_height_extra); // `_variables.scss`
+				}
+			}
+		}
+
+	}
+
+	@media (max-width: 767.98px) {
+
+		.container_humanbit_structure {
+			min-height: calc(100vh - calc($max_height_md + $footer_min_height)); // `_variables.scss`
+			margin-top: $max_height_md; // `_variables.scss`
+		}
+
+		.full_height {
+			min-height: calc(100vh - $max_height_md); // `_variables.scss`
+		}
+
+		.modal_full {
+			top: $max_height_md; // `_variables.scss`
+			height: calc(100vh - $max_height_md); // `_variables.scss`
+		}
+
+	}
+
+	@media (max-width: 575.98px) {
+
+		.container_humanbit_1 {
+			padding-right: 1.5rem;
+			padding-left: 1.5rem;
+		}
+
+		.container_humanbit_2 {
+			padding-right: 2rem;
+			padding-left: 2rem;
+		}
+
+	}
+
+		// -------------- //
+
+	  ////////////////////
+	 /* @media between */
+	////////////////////
+
+	@media (min-width: 576px) and (max-width: 767.98px) {
+
+
+
+	}
+
+	@media (min-width: 576px) and (max-width: 991.98px) {
+
+
+
+	}
+
+	@media (min-width: 768px) and (max-width: 991.98px) {
+
+
+
+	}
+
+	@media (min-width: 992px) and (max-width: 1199.98px) {
+
+
+
+	}
+
+	@media (min-width: 1200px) and (max-width: 1399.98px) {
+
+
+
+	}
+
+		// ------------------ //
+
+	  ////////////////////////
+	 /* @media (min-width) */
+	////////////////////////
+
+	@media (min-width: 576px) {
+
+
+
+	}
+
+	@media (min-width: 768px) {
+
+
+
+	}
+
+	@media (min-width: 992px) {
+
+
+
+	}
+
+	@media (min-width: 1200px) {
+
+
+
+	}
+
+	@media (min-width: 1400px) {
+
+
+
+	}
+
+		// ---------------- //
+
+	  //////////////////////
+	 /* mobile landscape */
+	//////////////////////
+
+	@media (max-height: 400px) and (orientation: landscape) {
+
+		.container_humanbit_structure {
+			min-height: calc(100vh - calc($max_height_xs_landscape + $footer_min_height)); // `_variables.scss`
+			margin-top: $max_height_xs_landscape; // `_variables.scss`
+		}
+
+		.full_height {
+			min-height: calc(100vh - $max_height_xs_landscape); // `_variables.scss`
+		}
+
+		.modal_full {
+			top: $max_height_xs_landscape; // `_variables.scss`
+			height: calc(100vh - $max_height_xs_landscape); // `_variables.scss`
+		}
+
+	}
+
+		// ----------------- //
+
+	  ///////////////////////
+	 /* iPad Pro portrait */
+	///////////////////////
+
+	// @media (min-width: 992px) and (max-width: 1199.98px) {
+	@media (width: 1024px) and (height: 1366px) {
+
+
+
+	}

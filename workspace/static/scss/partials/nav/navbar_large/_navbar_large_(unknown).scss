@@ -1,0 +1,484 @@
+  //
+ // Navbar with collapsing effect which starts by growing towards the upper edge of the viewport.
+//
+
+.nav_partial {
+
+	.navbar_grow_top {
+		height: $height_md; // `_variables.scss`
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		background: var(--nav_bg_color_top); // `_variables.scss`
+		background-size: 300% 300%;
+		// Maximum value of 1039 needed to overlay most `z-index` priorities such as <iframe>s while keeping `.modal` (1060) and `.modal-backdrop` (1040) visible.
+		z-index: 1039;
+
+		.navbar_container_full {
+			.box_left {
+				// Necessary to avoid layout break during transition.
+				min-width: 42.5px;
+
+				.navbar-toggler {
+					color: $color_white;
+					-webkit-transition: .25s ease-out; // Default value (avoid changing).
+					   -moz-transition: .25s ease-out; // Default value (avoid changing).
+							transition: .25s ease-out; // Default value (avoid changing).
+
+					&:focus {
+						-webkit-box-shadow: none;
+						box-shadow: none;
+					}
+
+					&.collapsed {
+						transform: rotate(0deg);
+
+						&:active {
+							transform: rotate(45deg);
+						}
+					}
+
+					&:not(.collapsed) {
+						transform: rotate(180deg);
+
+						&:active {
+							transform: rotate(135deg);
+						}
+					}
+
+					i {
+						&:hover {
+							opacity: 0.8;
+						}
+					}
+				}
+			}
+
+			.figure_logo {
+				max-width: 185px;
+				z-index: 1;
+
+				img {
+					max-height: 45px;
+				}
+			}
+
+			.nav-link {
+				&:hover,
+				&:focus {
+					color: $color_white;
+				}
+			}
+
+			.circle_1 {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 48px;
+				height: 48px;
+				background-color: transparent;
+				border: 2px solid $color_white;
+				border-radius: 50%;
+			}
+
+			.menu_link {
+				&:hover{
+					background-color: $color_second;
+					opacity: 1;
+				}
+			}
+
+			.login_modal {
+				&:hover {
+					background-color: $color_second;
+					opacity: 1;
+				}
+			}
+
+			// Transition is achieved through sizing properties (`width`/`height`/`max-width`/`max-height`).
+			.navbar-collapse {
+				position: fixed;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				max-width: calc(100vw - (100vw - 100%)); // Default value (avoid changing).
+				max-height: calc(100% - $height_md); // `_variables.scss`
+				overflow: hidden auto; // "If two keywords are specified, the first applies to `overflow-x` and the second to `overflow-y`."
+				-webkit-transition: height .25s ease; // Default value (avoid changing).
+				   -moz-transition: height .25s ease; // Default value (avoid changing).
+						transition: height .25s ease; // Default value (avoid changing).
+
+				// Bootstrap's transition class.
+				&.collapsing {
+					width: auto; // Default value (avoid changing).
+					height: 0; // Default value (avoid changing).
+				}
+
+				.collapse_wrapper {
+					max-width: calc(100vw - (100vw - 100%)); // Default value (avoid changing).
+					max-height: calc(100vh - $height_md); // `_variables.scss`
+
+					.scrollbar_spacing {
+						-webkit-transition: padding-right .25s ease !important; // Default value (avoid changing).
+						   -moz-transition: padding-right .25s ease !important; // Default value (avoid changing).
+								transition: padding-right .25s ease !important; // Default value (avoid changing).
+					}
+
+					.nav-link {
+						color: $color_white;
+						border-color: $color_white !important;
+
+						&:hover,
+						&:focus {
+							color: $color_second;
+							background-color: $color_white;
+							border-color: $color_second !important;
+							padding-right: 1rem;
+							padding-left: 1rem;
+							opacity: 1;
+						}
+
+						&.active_link {
+							color: $color_second;
+							background-color: $color_white;
+							border-color: $color_second !important;
+							padding-right: 1rem;
+							padding-left: 1rem;
+							opacity: 1;
+						}
+					}
+				}
+
+				// Hide scrollbar for Chromium.
+				&::-webkit-scrollbar {
+					display: none;
+				}
+
+				// Hide scrollbar for Firefox.
+				scrollbar-width: none;
+			}
+		}
+
+	}
+
+}
+
+
+
+/////////
+////////
+/*///// ==================== @media ==================== */
+//////
+/////
+///{
+
+			// ------------------ //
+
+		  ////////////////////////
+		 /* @media (max-width) */
+		////////////////////////
+
+		@media (max-width: 1399.98px) {
+
+			.nav_partial {
+
+				.navbar_grow_top {
+
+
+
+				}
+
+			}
+
+		}
+
+		@media (max-width: 1199.98px) {
+
+			.nav_partial {
+
+				.navbar_grow_top {
+
+
+
+				}
+
+			}
+
+		}
+
+		@media (max-width: 991.98px) {
+
+			.nav_partial {
+
+				.navbar_grow_top {
+
+
+
+				}
+
+			}
+
+		}
+
+		@media (max-width: 767.98px) {
+
+			.nav_partial {
+
+				.navbar_grow_top {
+					height: $max_height_md; // `_variables.scss`
+
+					.navbar_container_full {
+						.figure_logo {
+							max-width: 125px;
+
+							img {
+								max-height: 40px;
+							}
+						}
+
+						.circle_1 {
+							width: 40px;
+							height: 40px;
+						}
+
+						.navbar-collapse {
+							max-height: calc(100% - $max_height_md); // `_variables.scss`
+
+							.collapse_wrapper {
+								max-height: calc(100vh - $max_height_md); // `_variables.scss`
+							}
+						}
+					}
+				}
+
+			}
+
+		}
+
+		@media (max-width: 575.98px) {
+
+			.nav_partial {
+
+				.navbar_grow_top {
+					&.nav_extra {
+						height: $max_height_sm_extra; // `_variables.scss`
+
+						.navbar_container_full {
+							.navbar-collapse {
+								max-height: calc(100% - $max_height_sm_extra); // `_variables.scss`
+
+								.collapse_wrapper {
+									max-height: calc(100vh - $max_height_sm_extra); // `_variables.scss`
+								}
+							}
+						}
+					}
+				}
+
+			}
+
+		}
+
+			// -------------- //
+
+		  ////////////////////
+		 /* @media between */
+		////////////////////
+
+		@media (min-width: 576px) and (max-width: 767.98px) {
+
+			.nav_partial {
+
+				.navbar_grow_top {
+
+
+
+				}
+
+			}
+
+		}
+
+		@media (min-width: 576px) and (max-width: 991.98px) {
+
+			.nav_partial {
+
+				.navbar_grow_top {
+
+
+
+				}
+
+			}
+
+		}
+
+		@media (min-width: 768px) and (max-width: 991.98px) {
+
+			.nav_partial {
+
+				.navbar_grow_top {
+
+
+
+				}
+
+			}
+
+		}
+
+		@media (min-width: 992px) and (max-width: 1199.98px){
+
+			.nav_partial {
+
+				.navbar_grow_top {
+
+
+
+				}
+
+			}
+
+
+		}
+
+		@media (min-width: 1200px) and (max-width: 1399.98px) {
+
+			.nav_partial {
+
+				.navbar_grow_top {
+
+
+
+				}
+
+			}
+
+		}
+
+			// ------------------ //
+
+		  ////////////////////////
+		 /* @media (min-width) */
+		////////////////////////
+
+		@media (min-width: 576px) {
+
+			.nav_partial {
+
+				.navbar_grow_top {
+
+
+
+				}
+
+			}
+
+		}
+
+		@media (min-width: 768px) {
+
+			.nav_partial {
+
+				.navbar_grow_top {
+
+
+
+				}
+
+			}
+
+		}
+
+		@media (min-width: 992px) {
+
+			.nav_partial {
+
+				.navbar_grow_top {
+
+
+
+				}
+
+			}
+
+		}
+
+		@media (min-width: 1200px) {
+
+			.nav_partial {
+
+				.navbar_grow_top {
+
+
+
+				}
+
+			}
+
+		}
+
+		@media (min-width: 1400px) {
+
+			.nav_partial {
+
+				.navbar_grow_top {
+
+
+
+				}
+
+			}
+
+		}
+
+			// ---------------- //
+
+		  //////////////////////
+		 /* Mobile landscape */
+		//////////////////////
+
+		@media (max-height: 400px) and (orientation: landscape) {
+
+			.nav_partial {
+
+				.navbar_grow_top {
+					height: $max_height_xs_landscape; // `_variables.scss`
+
+					.navbar_container_full {
+						.navbar-collapse {
+							max-height: calc(100% - $max_height_xs_landscape); // `_variables.scss`
+
+							.collapse_wrapper {
+								max-height: calc(100vh - $max_height_xs_landscape); // `_variables.scss`
+							}
+						}
+					}
+				}
+
+			}
+
+		}
+
+			// ----------------- //
+
+		  ///////////////////////
+		 /* iPad Pro portrait */
+		///////////////////////
+
+		@media (width: 1024px) and (height: 1366px) {
+
+			.nav_partial {
+
+				.navbar_grow_top {
+
+
+
+				}
+
+			}
+
+		}
+
+// }

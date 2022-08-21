@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension id="members_login_google" status="released" xmlns="http://getsymphony.com/schemas/extension/1.0">
+    <name>Members: Google Login</name>
+    <description>
+        Logs in users usign Google Log in
+    </description>
+    <repo type="github">https://github.com/tiloschroeder/members_login_google</repo>
+    <url type="issues">https://github.com/tiloschroeder/members_login_google/issues</url>
+    <types>
+        <type>Members</type>
+        <type>Third Party Integration</type>
+        <type>Google</type>
+    </types>
+    <dependencies>
+        <dependency version="1.9.0">members</dependency>
+    </dependencies>
+    <authors>
+        <author>
+            <name github="tiloschroeder" symphony="tiloschroeder" twitter="tiloschroeder">Tilo Schröder</name>
+            <website>https://tiloschroeder.de/</website>
+        </author>
+    </authors>
+    <releases>
+        <release version="1.0.0" date="2019-06-10" min="2.7.0" max="2.x.x">
+            - Initial release
+        </release>
+    </releases>
+</extension>

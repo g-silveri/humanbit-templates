@@ -1,0 +1,30 @@
+============================================
+Log Created: 2022-02-02T09:59:00+00:00
+============================================
+Symphony Log
+Opened:  2022-02-02T09:59:00+00:00
+Version: 2.7.10
+Domain:  ecom1.humanbit.com
+--------------------------------------------
+
+============================================
+INSTALLATION PROCESS STARTED (2022-02-02T10:04:45+00:00)
+============================================
+02/02/2022 10:04 am > Notice: MYSQL: Establishing Connection
+02/02/2022 10:04 am > Notice: MYSQL: Importing Table Schema
+02/02/2022 10:04 am > Notice: MYSQL: Creating Default Author
+02/02/2022 10:04 am > Notice: WRITING: Creating ‘manifest’ folder (/manifest)
+02/02/2022 10:04 am > Notice: WRITING: Creating ‘logs’ folder (/manifest/logs)
+02/02/2022 10:04 am > Notice: WRITING: Creating ‘cache’ folder (/manifest/cache)
+02/02/2022 10:04 am > Notice: WRITING: Creating ‘tmp’ folder (/manifest/tmp)
+02/02/2022 10:04 am > Notice: WRITING: Configuration File
+02/02/2022 10:04 am > Notice: CONFIGURING: Frontend
+02/02/2022 10:04 am > Notice: An existing ‘workspace’ directory was found at this location. Symphony will use this workspace.
+02/02/2022 10:04 am > Notice: MYSQL: Importing Workspace Data...
+02/02/2022 10:04 am > Notice: CONFIGURING: Installing existing extensions
+============================================
+INSTALLATION COMPLETED: Execution Time - 1 sec (02.02.22 10:04:45)
+============================================
+
+
+

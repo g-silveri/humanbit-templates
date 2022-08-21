@@ -1,0 +1,26 @@
+  //
+ // filling effect partial
+//
+
+// @include filling_effect($text_before, $text_after, $empty_bar, $full_bar);
+
+@mixin filling_effect($text_before, $text_after, $empty_bar, $full_bar) {
+    // Reset
+    color: $text_before;
+    text-decoration: none;
+    padding-bottom: 0.25rem;
+
+    // Fillling effect
+    background-image: linear-gradient(to right, $full_bar 50%, $empty_bar 50%);
+    background-size: 200% 3px;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    transition: background-position .3s, color .3s ease-in-out, opacity .3s;
+
+    &:hover {
+        color: $text_after;
+        background-position: 0 100%;
+        opacity: .8;
+        cursor: pointer;
+    }
+}

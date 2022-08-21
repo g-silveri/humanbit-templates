@@ -1,0 +1,304 @@
+  //
+ // card_vert_module
+//
+
+%card_vert_module {
+
+	.card_vert_module {
+
+		.card_vert_container{
+			background-color: $color_first;
+			color: white;
+
+			a:hover{
+				box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+				box-shadow: 0 4px 18px 0 rgb(0 0 0 / 9%), 0 6px 40px 0 rgb(0 0 0 / 10%);
+				-webkit-box-shadow: 0 4px 18px 0 rgb(0 0 0 / 9%), 0 6px 40px 0 rgb(0 0 0 / 10%);
+				-moz-box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.09), 0 6px 40px 0 rgba(0, 0, 0, 0.1);
+
+			}
+		}
+
+		a:hover{
+			opacity: 1;
+		}
+
+		.btn_white_blue:hover{
+
+			background-color: $color_second;
+			color: white;
+
+			.card_vert_container_shadow_hover {
+   			box-shadow: 0 4px 8px 0 rgb(0 0 0 / 32%), 0 6px 20px 0 rgb(0 0 0 / 15%);
+   			box-shadow: 0 4px 18px 0 rgb(0 0 0 / 32%), 0 6px 40px 0 rgb(0 0 0 / 15%);
+   			-webkit-box-shadow: 0 4px 18px 0 rgb(0 0 0 / 32%), 0 6px 40px 0 rgb(0 0 0 / 15%);
+   			-moz-box-shadow: 0 4px 18px 0 rgb(0 0 0 / 32%), 0 6px 40px 0 rgb(0 0 0 / 15%);
+   			}
+		}
+
+
+
+
+
+
+		.card_header{
+			width: 100%;
+			height: 325px;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
+
+		.square_data {
+			height: 100px;
+			width: 100px;
+			background-color: #0e4c94;
+			padding-top: 10px;
+			 time{
+				 color: $color_third;
+			 }
+		}
+
+		time{
+			color: $color_white;
+		}
+
+		.time_card_vert{
+			font-weight: 200;
+		}
+
+		.date_card_vert{
+			line-height: 1rem;
+		}
+
+		.title_vert_card{
+			font-weight: 500;
+			color: $color_white;
+		}
+
+		.btn_white_blue{
+			color: $color_first;
+			background-color: $color_white;
+
+		}
+
+		.a_card:hover .btn_white_blue{
+			background-color: $color_third;
+			color: $color_white;
+			transition: all 0.3s ease-in-out;
+			-webkit-transition: all 0.3s ease-in-out;
+			-moz-transition: all 0.3s ease-in-out;
+			-o-transition: all 0.3s ease-in-out;
+		}
+
+    }
+
+
+
+    /////////
+    ////////
+    /*///// -------------------- @media -------------------- */
+    //////
+    /////
+
+
+
+      ////////////////////////
+     /* @media (max-width) */
+    ////////////////////////
+
+    @media (max-width: 1199.98px) {
+
+        .card_vert_module {
+
+
+
+        }
+
+    }
+
+    @media (max-width: 991.98px) {
+
+        .card_vert_module {
+
+
+
+        }
+
+    }
+
+    @media (max-width: 767.98px) {
+
+        .card_vert_module {
+
+
+
+        }
+
+    }
+
+    @media (max-width: 575.98px) {
+
+        .card_vert_module {
+
+
+
+        }
+
+    }
+
+
+
+      ////////////////////
+     /* @media between */
+    ////////////////////
+
+    @media (min-width: 576px) and (max-width: 767.98px) {
+
+        .card_vert_module {
+
+
+
+        }
+
+    }
+
+    @media (min-width: 576px) and (max-width: 991.98px) {
+
+        .card_vert_module {
+
+
+
+        }
+
+    }
+
+    @media (min-width: 768px) and (max-width: 991.98px) {
+
+        .card_vert_module {
+
+
+
+        }
+
+    }
+
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+
+        .card_vert_module {
+
+
+
+        }
+
+    }
+
+
+
+      ////////////////////////
+     /* @media (min-width) */
+    ////////////////////////
+
+    @media (min-width: 576px) {
+
+        .card_vert_module {
+
+
+
+        }
+
+    }
+
+    @media (min-width: 768px) {
+
+        .card_vert_module {
+
+
+
+        }
+
+    }
+
+    @media (min-width: 992px) {
+
+        .card_vert_module {
+
+
+
+        }
+
+    }
+
+    @media (min-width: 1199.98px) {
+
+        .card_vert_module {
+
+
+
+        }
+
+    }
+
+    @media (min-width: 1300px) {
+
+        .card_vert_module {
+
+
+
+        }
+
+    }
+
+    @media (min-width: 1499.98px) {
+
+        .card_vert_module {
+
+
+
+        }
+
+    }
+
+    @media (min-width: 1699.98px) {
+
+        .card_vert_module {
+
+
+
+        }
+
+    }
+
+
+
+      //////////////////////
+     /* mobile landscape */
+    //////////////////////
+
+    @media (max-height: 400px) and (orientation: landscape) {
+
+        .card_vert_module {
+
+
+
+        }
+
+    }
+
+
+
+      ///////////////////////
+     /* iPad Pro portrait */
+    ///////////////////////
+
+    @media (width: 1024px) and (height: 1366px) {
+
+        .card_vert_module {
+
+
+
+        }
+
+    }
+
+}

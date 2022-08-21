@@ -1,0 +1,143 @@
+  //
+ // Colors.
+//
+//
+// See: https://www.color-name.com
+
+// Black (Licorice)
+$color_black: #1A130F;
+// $color_black: #01012d;
+
+// White
+$color_white: #ffffff;
+
+
+// Yale Blue
+$color_first: #0e4c94;
+
+// Yankees Blue
+$color_second: #192946;
+
+// Big Foot Feet
+$color_third: #f28f52;
+
+// Kelly Green
+$color_fourth: #69C914;
+
+// Tangerine Yellow
+$color_fifth: #ffcc00;
+
+// Pink Raspberry
+$color_sixth: #980539;
+
+// Telemagenta
+$color_seventh: #D12A6A;
+
+// Battery Charged Blue
+$color_eighth: #15A4DA;
+
+// Blue (Munsell)
+$color_ninth: #008aaa;
+
+// Blue
+$color_tenth: #0000FF;
+
+// Anti-Flash White
+$color_gray_light: #F2F2F2;
+
+// Platinum
+$color_gray_medium: #E6E6E6;
+
+// Philippine Silver
+$color_gray_dark: #b3b3b3;
+
+
+// Navbar background. <<IN>> //
+:root {
+	--nav_bg_color_primary: #{$color_first};
+	--nav_bg_color_secondary: #{$color_second};
+}
+// Navbar background. <<OUT>> //
+
+
+// Social networks. <<IN>> //
+// Facebook
+$color_facebook: #4267B2;
+
+// Twitter
+$color_twitter: #55ACEE;
+
+// LinkedIn
+$color_linkedin: #0077B5;
+
+// Email
+$color_email: #7D7D7D;
+
+// WhatsApp
+$color_whatsapp: #25D366;
+// Social networks. <<OUT>> //
+
+
+  //
+ // Navbar.
+//
+
+// <nav>'s background. <<IN>> //
+:root {
+	// The following are default values (avoid changing).
+	--coll_ghost_width: 40rem; // Sizing.
+	@media (max-width: 767.98px) {
+		--coll_ghost_width: 100vw; // Sizing.
+	}
+	--nav_bg_color_top: linear-gradient(to top, var(--nav_bg_color_primary) 34%, var(--nav_bg_color_secondary) 65%) bottom;
+	--nav_bg_color_right: linear-gradient(to right, var(--nav_bg_color_primary) 34%, var(--nav_bg_color_secondary) 65%) left;
+	--nav_bg_color_bottom: linear-gradient(to bottom, var(--nav_bg_color_primary) 34%, var(--nav_bg_color_secondary) 65%) top;
+	--nav_bg_color_left: linear-gradient(to left, var(--nav_bg_color_primary) 34%, var(--nav_bg_color_secondary) 65%) right;
+	--nav_bg_position_top: top;
+	--nav_bg_position_right: right;
+	--nav_bg_position_bottom: bottom;
+	--nav_bg_position_left: left;
+}
+// <nav>'s background. <<OUT>> //
+
+
+  //
+ // Height (values must be input in rem unit — even if it's zero).
+//
+
+// <nav>'s `height` and content's `margin-top`/`top`. <<IN>> //
+$height_md: 6rem; // Desktop.
+$max_height_md: 5rem; // Tablet.
+$max_height_xs_landscape: 4.5rem; // Mobile landscape orientation.
+// <nav>'s `height` with extra field (e.g. city).
+$max_height_extra: 9rem; // Extra slot enabled.
+// <nav>'s `height` and content's `margin-top`/`top`. <<IN>> //
+
+// <footer>'s `height`. <<IN>> //
+$footer_min_height: 0rem; // Default: 0rem
+// <footer>'s `height`. <<OUT>> //
+
+
+  //
+ // <form>'s @mixin.
+//
+
+$color_primary: $color_white;
+$color_secondary: $color_black;
+$color_file: $color_white;
+$bg_color_primary: $color_ninth;
+$bg_color_secondary: $color_third;
+$bg_color_file: $color_sixth;
+$border: 1px solid $color_first;
+$border_focus_color: $color_third;
+$check_radius_standard: 0;
+$radius_standard: 10px;
+$radius_transformed: 50rem;
+$focus_box_shadow: (inset 0 1px 2px rgba(0, 0, 0, .08), 0 0 .15rem rgba($color_third, .6));
+
+
+  //
+ // `font-weight`
+//
+
+$fw_100: 100; $fw_200: 200; $fw_300: 300; $fw_400: 400; $fw_500: 500; $fw_600: 600; $fw_700: 700; $fw_800: 800; $fw_900: 900;

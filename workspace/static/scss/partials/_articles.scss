@@ -1,0 +1,223 @@
+  //
+ // articles partial
+//
+
+.articles_partial {
+
+	// @extend %template-1_module;
+	// @extend %template-2_module;
+	// @extend %template-3_module;
+	// @extend %template-4_module;
+	// @extend %template-5_module;
+
+
+
+}
+
+
+
+/////////
+////////
+/*///// ==================== @media ==================== */
+//////
+/////
+
+		// ------------------ //
+
+	  ////////////////////////
+	 /* @media (max-width) */
+	////////////////////////
+
+	@media (max-width: 1399.98px) {
+
+		.articles_partial {
+
+
+
+		}
+
+	}
+
+	@media (max-width: 1199.98px) {
+
+		.articles_partial {
+
+
+
+		}
+
+	}
+
+	@media (max-width: 991.98px) {
+
+		.articles_partial {
+
+
+
+		}
+
+	}
+
+	@media (max-width: 767.98px) {
+
+		.articles_partial {
+
+
+
+		}
+
+	}
+
+	@media (max-width: 575.98px) {
+
+		.articles_partial {
+
+
+
+		}
+
+	}
+
+		// -------------- //
+
+	  ////////////////////
+	 /* @media between */
+	////////////////////
+
+	@media (min-width: 576px) and (max-width: 767.98px) {
+
+		.articles_partial {
+
+
+
+		}
+
+	}
+
+	@media (min-width: 576px) and (max-width: 991.98px) {
+
+		.articles_partial {
+
+
+
+		}
+
+	}
+
+	@media (min-width: 768px) and (max-width: 991.98px) {
+
+		.articles_partial {
+
+
+
+		}
+
+	}
+
+	@media (min-width: 992px) and (max-width: 1199.98px) {
+
+		.articles_partial {
+
+
+
+		}
+
+	}
+
+	@media (min-width: 1200px) and (max-width: 1399.98px) {
+
+		.articles_partial {
+
+
+
+		}
+
+	}
+
+		// ------------------ //
+
+	  ////////////////////////
+	 /* @media (min-width) */
+	////////////////////////
+
+	@media (min-width: 576px) {
+
+		.articles_partial {
+
+
+
+		}
+
+	}
+
+	@media (min-width: 768px) {
+
+		.articles_partial {
+
+
+
+		}
+
+	}
+
+	@media (min-width: 992px) {
+
+		.articles_partial {
+
+
+
+		}
+
+	}
+
+	@media (min-width: 1200px) {
+
+		.articles_partial {
+
+
+
+		}
+
+	}
+
+	@media (min-width: 1400px) {
+
+		.articles_partial {
+
+
+
+		}
+
+	}
+
+		// ---------------- //
+
+	  //////////////////////
+	 /* mobile landscape */
+	//////////////////////
+
+	@media (max-height: 400px) and (orientation: landscape) {
+
+		.articles_partial {
+
+
+
+		}
+
+	}
+
+		// ----------------- //
+
+	  ///////////////////////
+	 /* iPad Pro portrait */
+	///////////////////////
+
+	@media (width: 1024px) and (height: 1366px) {
+
+		.articles_partial {
+
+
+
+		}
+
+	}

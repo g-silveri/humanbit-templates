@@ -1,0 +1,233 @@
+  //
+ // slide hero home
+//
+%slide_hero_home_module{
+	.slide_hero_home_module {
+
+		.slide_item {
+			width: 100%;
+			height: calc(100vh - 8rem);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
+
+		.velo {
+			background-color: rgba(0, 0, 0, 0.3);
+		}
+
+		.slick-prev, .slick-next {
+			background-color: $color_first;
+			width: 41px;
+			height: 41px;
+		}
+
+		.slick-prev:before {
+			content: '<';
+		}
+
+		.slick-next:before {
+			content: '>';
+		}
+	}
+
+	// ------------------ //
+
+			  ////////////////////////
+			 /* @media (max-width) */
+			////////////////////////
+
+			@media (max-width: 1399.98px) {
+
+				.slide_hero_home_module {
+
+
+
+				}
+
+			}
+
+			@media (max-width: 1199.98px) {
+
+				.slide_hero_home_module {
+
+
+
+				}
+
+			}
+
+			@media (max-width: 991.98px) {
+
+				.slide_hero_home_module {
+
+
+
+				}
+
+			}
+
+			@media (max-width: 767.98px) {
+
+				.slide_hero_home_module {
+
+
+
+				}
+
+			}
+
+			@media (max-width: 575.98px) {
+
+				.slide_hero_home_module {
+
+
+
+				}
+
+			}
+
+				// -------------- //
+
+			  ////////////////////
+			 /* @media between */
+			////////////////////
+
+			@media (min-width: 576px) and (max-width: 767.98px) {
+
+				.slide_hero_home_module {
+
+
+
+				}
+
+			}
+
+			@media (min-width: 576px) and (max-width: 991.98px) {
+
+				.slide_hero_home_module {
+
+
+
+				}
+
+			}
+
+			@media (min-width: 768px) and (max-width: 991.98px) {
+
+				.slide_hero_home_module {
+
+
+
+				}
+
+			}
+
+			@media (min-width: 992px) and (max-width: 1199.98px) {
+
+				.slide_hero_home_module {
+
+
+
+				}
+
+			}
+
+			@media (min-width: 1200px) and (max-width: 1399.98px) {
+
+				.slide_hero_home_module {
+
+
+
+				}
+
+			}
+
+				// ------------------ //
+
+			  ////////////////////////
+			 /* @media (min-width) */
+			////////////////////////
+
+			@media (min-width: 576px) {
+
+				.slide_hero_home_module {
+
+
+
+				}
+
+			}
+
+			@media (min-width: 768px) {
+
+				.slide_hero_home_module {
+
+
+
+				}
+
+			}
+
+			@media (min-width: 992px) {
+
+				.slide_hero_home_module {
+
+
+
+				}
+
+			}
+
+			@media (min-width: 1200px) {
+
+				.slide_hero_home_module {
+
+
+
+				}
+
+			}
+
+			@media (min-width: 1400px) {
+
+				.slide_hero_home_module {
+
+
+
+				}
+
+			}
+
+				// ---------------- //
+
+			  //////////////////////
+			 /* mobile landscape */
+			//////////////////////
+
+			@media (max-height: 400px) and (orientation: landscape) {
+
+				.slide_hero_home_module {
+
+
+
+				}
+
+			}
+
+				// ----------------- //
+
+			  ///////////////////////
+			 /* iPad Pro portrait */
+			///////////////////////
+
+			@media (width: 1024px) and (height: 1366px) {
+
+				.slide_hero_home_module {
+
+
+
+				}
+
+			}
+}

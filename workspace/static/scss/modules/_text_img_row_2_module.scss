@@ -1,0 +1,340 @@
+  //
+ // Row with text and image
+//
+
+%text_img_row_2_module {
+
+	// @extend %slide_hero_home_module;
+
+	.text_img_row_2_module {
+
+		.space_home_img{
+			min-height: 100%;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+		padding: 0 !important;
+
+		.space_home_text{
+			background-color: $color_second;
+			padding-top: 3rem;
+			padding-bottom: 3rem;
+			padding-left: 3rem;
+			padding-right: 3rem;
+			h4{
+				text-transform: capitalize;
+				color: $color_fourth;
+				font-weight: 600;
+
+			}
+
+			.title_buttons{
+				padding-top: 1.5rem;
+				border-top: 1px solid $color_fourth;
+			}
+
+			.btn_bg_second{
+				width: 100%;
+				margin-bottom: 1rem !important;
+			}
+
+		}
+
+		.txt_img_row_btn{
+			&:hover{
+				background-color: $color_third;
+				color: $color_white;
+			}
+		}
+
+		.box_studio{
+
+			background-color: $color_second;
+		}
+
+		.space_home_element:nth-child(odd) {
+			padding-right: 3rem;
+		}
+
+		.space_home_element:nth-child(even) {
+			padding-left: 3rem;
+		}
+
+		.slide_item {
+			height: 450px;
+		}
+
+		.slick-next {
+			right: -0.5rem;
+		}
+
+		.slick-prev {
+			left: -0.5rem;
+		}
+
+		.h4 {
+			color: $color_third;
+		}
+
+		h6 {
+			color: $color_third;
+		}
+
+		.btn_white_orange {
+			width: 60%;
+		}
+
+		.square_data {
+			height: 100px;
+			width: 100px;
+			background-color: $color_first;
+			padding-top: 22px;
+		}
+
+		.square_data .date_card_event_home {
+			color: $color_third;
+		}
+
+		.space_det_btn {
+			padding-bottom: 0.2rem;
+		}
+
+	}
+
+
+
+/////////
+////////
+/*///// ==================== @media ==================== */
+//////
+/////
+////{
+			// ------------------ //
+
+		  ////////////////////////
+		 /* @media (max-width) */
+		////////////////////////
+
+		@media (max-width: 1399.98px) {
+
+			.text_img_row_2_module {
+
+
+
+			}
+
+		}
+
+		@media (max-width: 1199.98px) {
+
+			.text_img_row_2_module {
+
+
+
+			}
+
+		}
+
+		@media (max-width: 991.98px) {
+
+			.text_img_row_2_module {
+
+				.space_home_element:nth-child(odd){
+					padding-right: 0rem;
+				}
+
+				.space_home_element:nth-child(even){
+					padding-left: 0rem;
+				}
+
+				.space_home_text{
+					-webkit-box-ordinal-group: 3 !important;
+					-ms-flex-order: 2 !important;
+					order: 2 !important;
+				}
+
+			}
+
+		}
+
+		@media (max-width: 767.98px) {
+
+			.text_img_row_2_module {
+
+				.btn_white_orange {
+					width: 100%;
+				}
+
+				.space_det_btn {
+					padding-right: 5.5rem;
+				}
+
+			}
+
+		}
+
+		@media (max-width: 575.98px) {
+
+			.text_img_row_2_module {
+
+
+
+			}
+
+		}
+
+			// -------------- //
+
+		  ////////////////////
+		 /* @media between */
+		////////////////////
+
+		@media (min-width: 576px) and (max-width: 767.98px) {
+
+			.text_img_row_2_module {
+
+
+
+			}
+
+		}
+
+		@media (min-width: 576px) and (max-width: 991.98px) {
+
+			.text_img_row_2_module {
+
+
+
+			}
+
+		}
+
+		@media (min-width: 768px) and (max-width: 991.98px) {
+
+			.text_img_row_2_module {
+
+
+
+			}
+
+		}
+
+		@media (min-width: 992px) and (max-width: 1199.98px) {
+
+			.text_img_row_2_module {
+
+
+
+			}
+
+		}
+
+		@media (min-width: 1200px) and (max-width: 1399.98px) {
+
+			.text_img_row_2_module {
+
+
+
+			}
+
+		}
+
+			// ------------------ //
+
+		  ////////////////////////
+		 /* @media (min-width) */
+		////////////////////////
+
+		@media (min-width: 576px) {
+
+			.text_img_row_2_module {
+
+
+
+			}
+
+		}
+
+		@media (min-width: 768px) {
+
+			.text_img_row_2_module {
+
+
+
+			}
+
+		}
+
+		@media (min-width: 992px) {
+
+			.text_img_row_2_module {
+
+				.space_home_text:nth-child(odd) {
+					text-align: left;
+				}
+
+				.space_home_text:nth-child(even) {
+					text-align: left;
+				}
+
+			}
+
+		}
+
+		@media (min-width: 1200px) {
+
+			.text_img_row_2_module {
+
+
+
+			}
+
+		}
+
+		@media (min-width: 1400px) {
+
+			.text_img_row_2_module {
+
+
+
+			}
+
+		}
+
+			// ---------------- //
+
+		  //////////////////////
+		 /* mobile landscape */
+		//////////////////////
+
+		@media (max-height: 400px) and (orientation: landscape) {
+
+			.text_img_row_2_module {
+
+
+
+			}
+
+		}
+
+			// ----------------- //
+
+		  ///////////////////////
+		 /* iPad Pro portrait */
+		///////////////////////
+
+		@media (width: 1024px) and (height: 1366px) {
+
+			.text_img_row_2_module {
+
+
+
+			}
+
+		}
+
+//	}
+
+}

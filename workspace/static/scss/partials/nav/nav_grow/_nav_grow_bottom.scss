@@ -1,0 +1,698 @@
+  //
+ // Navbar with collapsing effect which starts by growing towards the lower edge of the viewport.
+//
+
+.nav_partial {
+
+	.nav_grow_bottom {
+		height: $height_md; // `_variables.scss`
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		background-color: var(--nav_bg_color_primary); // `_variables.scss`
+		background-image: none;
+		// Maximum value of 1039 needed to overlay most `z-index` priorities such as <iframe>s while keeping `.modal` (1060) and `.modal-backdrop` (1040) visible.
+		z-index: 1039;
+
+		// Navbar's `background` containers.
+		.cont_ghost_bg {
+			height: $height_md; // `_variables.scss`
+
+			&.nav_ghost_bg {
+				background: var(--nav_bg_color_bottom); // `_variables.scss`
+				background-size: 300% 300%; // Default value (avoid changing).
+			}
+
+			&.coll_ghost_bg {
+				width: 100%;
+				max-width: calc(var(--coll_ghost_width) - calc(100vw - 100%)); // `_variables.scss`
+				background: var(--nav_bg_color_right); // `_variables.scss`
+				background-size: 300% 300%; // Default value (avoid changing).
+			}
+		}
+
+		.menu_navbar {
+			z-index: 1;
+
+			.landmark {
+				@include fluid_type(20em, 100em, 1rem, 1.125rem);
+				font-weight: 500;
+				text-transform: uppercase;
+				color: $color_white;
+
+				.menu_item {
+					&:hover{
+						color: $color_white;
+						background-color: $color_third;
+					}
+				}
+
+				.vbar {
+					line-height: 1.7;
+				}
+			}
+
+			.box_left {
+				// Necessary to avoid layout break during transition.
+				min-width: 42.5px;
+
+				.navbar-toggler {
+					transition: .4s ease-out; // Default value (avoid changing).
+
+					&:hover {
+						opacity: 0.8;
+					}
+
+					&:focus {
+						box-shadow: none;
+					}
+
+					&.collapsed {
+						transform: rotate(0deg);
+
+						&:active {
+							transform: rotate(45deg);
+						}
+					}
+
+					&:not(.collapsed) {
+						transform: rotate(180deg);
+
+						&:active {
+							transform: rotate(135deg);
+						}
+
+						// Animate collapse into "X".
+
+						// Top line rotates 45 degrees clockwise and moves up and in a bit to close the center of the "X" in the center of the <button>.
+						span:nth-child(1) {
+							transform: translate(25%, -75%) rotate(45deg);
+						}
+
+						// Center line goes transparent.
+						span:nth-child(2) {
+							opacity: 0;
+						}
+
+						// Bottom line rotates 45 degrees counter clockwise, in, and down a bit to close the center of the "X" in the center of the <button>.
+						span:nth-child(3) {
+							transform: translate(25%, -50%) rotate(-45deg) ;
+						}
+					}
+
+					// Define the shape and color of the hamburger lines.
+					span {
+						position: relative;
+						left: 0;
+						display: block;
+						width: 17.5px;
+						height: 3px;
+						margin-top: 3px;
+						margin-bottom: 3px;
+						background-color: $color_white;
+						border-radius: 50rem;
+						opacity: 1;
+						transition: .25s ease-out;
+						transform-origin: center left;
+
+						// Top line needs a little `padding`.
+						&:nth-child(1) {
+							margin-top: 0.3em;
+						}
+
+						// Animate collapse open into hamburger menu.
+
+						// Top line moves back to initial position and rotates back to 0 degrees.
+						&:nth-child(1) {
+							transform: translate(0%, 0%) rotate(0deg) ;
+						}
+
+						// Middle line goes back to regular color and `opacity`.
+						&:nth-child(2) {
+							opacity: 1;
+						}
+
+						// Bottom line goes back to initial position and rotates back to 0 degrees.
+						&:nth-child(3) {
+							transform: translate(0%, 0%) rotate(0deg) ;
+						}
+					}
+				}
+			}
+
+			.figure_logo {
+				max-width: 165px;
+
+				img {
+					max-height: 48px;
+				}
+			}
+
+			.nav-link {
+				&:hover,
+				&:focus {
+					color: $color_white;
+				}
+			}
+
+			.menu_link,
+			.menu_steps,
+			.login_modal {
+				@include fluid_type(20em, 100em, 0.8rem, 1rem);
+				font-weight: 400;
+
+				&:hover,
+				&:focus {
+					background-color: $color_second;
+					opacity: 1;
+				}
+			}
+
+			.circle_1 {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 48px;
+				height: 48px;
+				background-color: transparent;
+				border: 2px solid $color_white;
+				border-radius: 50%;
+			}
+		}
+
+		// Transition is achieved through sizing properties (`width`/`height`/`max-width`/`max-height`).
+		.navbar-collapse {
+			overflow: hidden auto; // "If two keywords are specified, the first applies to `overflow-x` and the second to `overflow-y`."
+
+			&.menu_collapse {
+				position: fixed;
+				top: $height_md; // `_variables.scss`
+				right: 0;
+				bottom: 0;
+				left: 0;
+				max-width: calc(100vw - (100vw - 100%)); // Default value (avoid changing).
+				max-height: calc(100% - $height_md); // `_variables.scss`
+				transition: height .35s ease; // Default value (avoid changing).
+
+				// Bootstrap's transition class.
+				&.collapsing {
+					width: auto; // Default value (avoid changing).
+					height: 0; // Default value (avoid changing).
+				}
+
+				.collapse_wrapper {
+					min-height: calc(100vh - $height_md); // `_variables.scss`
+					// Transition for `.scrollbar_spacing`.
+					transition: padding-right .35s ease !important; // Default value (avoid changing).
+
+					.collapse_contents {
+						min-height: calc(100vh - $height_md); // `_variables.scss`
+
+						.container_sizing {
+							width: -webkit-fill-available;
+							width: -moz-available;
+
+							// Collapse (basic).
+							&.basic {
+								.nav-link {
+									// Sizing values necessary to allow the use of negative margins.
+									width: -webkit-fill-available; // Default value (avoid changing).
+									width: -moz-available; // Default value (avoid changing).
+									max-width: unset; // Default value (avoid changing).
+									color: $color_white;
+									border-color: $color_white !important;
+
+									&:hover,
+									&:focus {
+										color: $color_second;
+										background-color: $color_white;
+										border-color: $color_second !important;
+										// margin-left: -1rem;
+										// padding-right: 1rem;
+										padding-left: 1rem;
+										opacity: 1;
+									}
+
+									&.active_link {
+										color: $color_second;
+										background-color: $color_white;
+										border-color: $color_second !important;
+										// margin-left: -1rem;
+										// padding-right: 1rem;
+										padding-left: 1rem;
+										opacity: 1;
+									}
+								}
+							}
+
+							// Collapse (sections).
+							&.sections {
+								.nav-link {
+									color: unset;
+									opacity: 1;
+
+									&:hover,
+									&:focus {
+										opacity: .8;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			&.menu_options {
+				position: fixed;
+				top: $height_md; // `_variables.scss`
+				right: 0;
+				max-width: var(--coll_ghost_width); // `_variables.scss`
+				width: 100%;
+				height: auto;
+				transition: width .35s ease; // Default value (avoid changing).
+
+				// Bootstrap's transition class.
+				&.collapsing {
+					width: 0; // Default value (avoid changing).
+					height: auto; // Default value (avoid changing).
+				}
+
+				.options_wrapper {
+					min-width: var(--coll_ghost_width); // `_variables.scss`
+
+					.btn_toggler {
+						&.collapsed {
+							.icon_toggler {
+								transform: rotate(180deg);
+							}
+						}
+
+						&:not(.collapsed) {
+							.icon_toggler {
+								transform: rotate(0deg);
+							}
+						}
+
+						.icon_toggler {
+							transition: .35s ease-out; // Default value (avoid changing).
+						}
+					}
+
+					.option_item {
+						@include fluid_type(20em, 100em, 0.8rem, 0.8rem);
+						font-weight: 400;
+						color: $color_white;
+						padding: 0.3rem 1.7rem;
+
+						&:hover {
+							background-color: $color_first;
+							border: 2px solid $color_white;
+						}
+					}
+
+					.option_unsaved {
+						background-color: $color_first;
+						border: 2px solid $color_white;
+
+						&:hover {
+							background-color: $color_third;
+							border: 2px solid $color_third;
+						}
+					}
+				}
+			}
+
+			// Hide scrollbar for Chromium.
+			&::-webkit-scrollbar {
+				display: none;
+			}
+
+			// Hide scrollbar for Firefox.
+			scrollbar-width: none;
+		}
+	}
+
+}
+
+
+
+/////////
+////////
+/*///// ==================== @media ==================== */
+//////
+////{
+
+			// ------------------ //
+
+		  ////////////////////////
+		 /* @media (max-width) */
+		////////////////////////
+
+		@media (max-width: 1399.98px) {
+
+			.nav_partial {
+
+				.nav_grow_bottom {
+
+
+
+				}
+
+			}
+
+		}
+
+		@media (max-width: 1199.98px) {
+
+			.nav_partial {
+
+				.nav_grow_bottom {
+
+
+
+				}
+
+			}
+
+		}
+
+		@media (max-width: 991.98px) {
+
+			.nav_partial {
+
+				.nav_grow_bottom {
+					&.nav_extra {
+						height: $max_height_extra; // `_variables.scss`
+
+						// Navbar's `background` containers.
+						.cont_ghost_bg {
+							height: $max_height_extra; // `_variables.scss`
+						}
+
+						.navbar-collapse {
+							&.menu_collapse {
+								top: $max_height_extra; // `_variables.scss`
+								max-height: calc(100% - $max_height_extra); // `_variables.scss`
+
+								.collapse_wrapper {
+									min-height: calc(100vh - $max_height_extra); // `_variables.scss`
+
+									.collapse_contents {
+										min-height: calc(100vh - $max_height_extra); // `_variables.scss`
+									}
+								}
+							}
+
+							&.menu_options {
+								top: $max_height_extra; // `_variables.scss`
+							}
+						}
+					}
+				}
+
+			}
+
+		}
+
+		@media (max-width: 767.98px) {
+
+			.nav_partial {
+
+				.nav_grow_bottom {
+					height: $max_height_md; // `_variables.scss`
+
+					// Navbar's `background` containers.
+					.cont_ghost_bg {
+						height: $max_height_md; // `_variables.scss`
+					}
+
+					.menu_navbar {
+						.figure_logo {
+							max-width: 125px;
+
+							img {
+								max-height: 30px;
+							}
+						}
+
+						.circle_1 {
+							width: 30px;
+							height: 30px;
+						}
+					}
+
+					.navbar-collapse {
+						&.menu_collapse {
+							top: $max_height_md; // `_variables.scss`
+							max-height: calc(100% - $max_height_md); // `_variables.scss`
+
+							.collapse_wrapper {
+								min-height: calc(100vh - $max_height_md); // `_variables.scss`
+
+								.collapse_contents {
+									min-height: calc(100vh - $max_height_md); // `_variables.scss`
+								}
+							}
+						}
+
+						&.menu_options {
+							top: $max_height_md; // `_variables.scss`
+						}
+					}
+				}
+
+			}
+
+		}
+
+		@media (max-width: 575.98px) {
+
+			.nav_partial {
+
+				.nav_grow_bottom {
+
+
+
+				}
+
+			}
+
+		}
+
+			// -------------- //
+
+		  ////////////////////
+		 /* @media between */
+		////////////////////
+
+		@media (min-width: 576px) and (max-width: 767.98px) {
+
+			.nav_partial {
+
+				.nav_grow_bottom {
+
+
+
+				}
+
+			}
+
+		}
+
+		@media (min-width: 576px) and (max-width: 991.98px) {
+
+			.nav_partial {
+
+				.nav_grow_bottom {
+
+
+
+				}
+
+			}
+
+		}
+
+		@media (min-width: 768px) and (max-width: 991.98px) {
+
+			.nav_partial {
+
+				.nav_grow_bottom {
+
+
+
+				}
+
+			}
+
+		}
+
+		@media (min-width: 992px) and (max-width: 1199.98px){
+
+			.nav_partial {
+
+				.nav_grow_bottom {
+
+
+
+				}
+
+			}
+
+
+		}
+
+		@media (min-width: 1200px) and (max-width: 1399.98px) {
+
+			.nav_partial {
+
+				.nav_grow_bottom {
+
+
+
+				}
+
+			}
+
+		}
+
+			// ------------------ //
+
+		  ////////////////////////
+		 /* @media (min-width) */
+		////////////////////////
+
+		@media (min-width: 576px) {
+
+			.nav_partial {
+
+				.nav_grow_bottom {
+
+
+
+				}
+
+			}
+
+		}
+
+		@media (min-width: 768px) {
+
+			.nav_partial {
+
+				.nav_grow_bottom {
+
+
+
+				}
+
+			}
+
+		}
+
+		@media (min-width: 992px) {
+
+			.nav_partial {
+
+				.nav_grow_bottom {
+
+
+
+				}
+
+			}
+
+		}
+
+		@media (min-width: 1200px) {
+
+			.nav_partial  {
+
+				.nav_grow_bottom {
+
+
+
+				}
+
+			}
+
+		}
+
+		@media (min-width: 1400px) {
+
+			.nav_partial  {
+
+				.nav_grow_bottom {
+
+
+
+				}
+
+			}
+
+		}
+
+			// ---------------- //
+
+		  //////////////////////
+		 /* Mobile landscape */
+		//////////////////////
+
+		@media (max-height: 400px) and (orientation: landscape) {
+
+			.nav_partial  {
+
+				.nav_grow_bottom {
+					height: $max_height_xs_landscape; // `_variables.scss`
+
+					// Navbar's `background` containers.
+					.cont_ghost_bg {
+						height: $max_height_xs_landscape; // `_variables.scss`
+					}
+
+					.navbar-collapse {
+						&.menu_collapse {
+							top: $max_height_xs_landscape; // `_variables.scss`
+							max-height: calc(100% - $max_height_xs_landscape); // `_variables.scss`
+
+							.collapse_wrapper {
+								min-height: calc(100vh - $max_height_xs_landscape); // `_variables.scss`
+
+								.collapse_contents {
+									min-height: calc(100vh - $max_height_xs_landscape); // `_variables.scss`
+								}
+							}
+						}
+
+						&.menu_options {
+							top: $max_height_xs_landscape; // `_variables.scss`
+						}
+					}
+				}
+
+			}
+
+		}
+
+			// ----------------- //
+
+		  ///////////////////////
+		 /* iPad Pro portrait */
+		///////////////////////
+
+		@media (width: 1024px) and (height: 1366px) {
+
+			.nav_partial {
+
+				.nav_grow_bottom {
+
+
+
+				}
+
+			}
+
+		}
+
+// }

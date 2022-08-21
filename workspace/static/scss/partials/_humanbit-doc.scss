@@ -1,0 +1,299 @@
+  //
+ // home partial
+//
+
+
+
+.humanbit-doc {
+	@extend %text_img_row_module;
+	@extend %card_horiz_module;
+	@extend %card_vert_module;
+	@extend %slide_selection_module;
+	@extend %slide_imgs_inside_card_module;
+	@extend %slide_hero_home_module;
+	//verify error slide_hero_home_module with no !optional;
+
+	.modal_slider_image{
+		background-color: rgba(25, 41, 70, 1);
+		margin-top: 6rem;
+
+		.modal-content{
+			background-color: $color_second;
+		}
+
+		.container_img_product_slider{
+			height: 500px;
+		}
+
+
+
+		button{
+			color: white;
+			background-color: $color_second;
+			border: 0;
+			font-size: 1.3rem;
+			padding-right: 0;
+			opacity: 0.7;
+		}
+
+		button[aria-label="next"] {
+			color: transparent;
+		}
+
+		.modal-header, .modal-footer, .modal_title_container {
+			background-color: $color_second;
+			color: $color_white;
+			border: 0;
+			opacity: 0.7;
+		}
+
+		.slick-prev, .slick-next{
+			background-color: rgba(255, 255, 255, 0.7);
+			z-index: 10;
+			width: 30px;
+			height: 30px;
+			opacity: 0.5;
+			&:hover{
+				opacity: 1;
+			}
+		}
+
+		.slick-prev{
+			left: 0;
+
+		}
+		.slick-next{
+			right: 0;
+		}
+
+		.slick-prev:before{
+			content: "<";
+			font-family: "Poppins", sans-serif;
+			font-size: 1.3rem;
+			line-height: 1.4;
+			color: $color_first;
+		}
+
+		.slick-next:before{
+			content: ">";
+			font-family: "Poppins", sans-serif;
+			font-size: 1.3rem;
+			line-height: 1.4;
+			color: $color_first;
+		}
+
+		.modal_event_title{
+			font-weight: 500;
+		}
+
+
+	}
+}
+
+
+
+/////////
+////////
+/*///// ==================== @media ==================== */
+//////
+/////
+
+		// ------------------ //
+
+	  ////////////////////////
+	 /* @media (max-width) */
+	////////////////////////
+
+	@media (max-width: 1399.98px) {
+
+		.humanbit-doc {
+
+
+
+		}
+
+	}
+
+	@media (max-width: 1199.98px) {
+
+		.humanbit-doc {
+
+
+
+		}
+
+	}
+
+	@media (max-width: 991.98px) {
+
+		.humanbit-doc {
+
+
+
+		}
+
+	}
+
+	@media (max-width: 767.98px) {
+
+		.humanbit-doc {
+
+
+
+		}
+
+	}
+
+	@media (max-width: 575.98px) {
+
+		.humanbit-doc {
+
+
+
+		}
+
+	}
+
+		// -------------- //
+
+	  ////////////////////
+	 /* @media between */
+	////////////////////
+
+	@media (min-width: 576px) and (max-width: 767.98px) {
+
+		.humanbit-doc {
+
+
+
+		}
+
+	}
+
+	@media (min-width: 576px) and (max-width: 991.98px) {
+
+		.humanbit-doc {
+
+
+
+		}
+
+	}
+
+	@media (min-width: 768px) and (max-width: 991.98px) {
+
+		.humanbit-doc {
+
+
+
+		}
+
+	}
+
+	@media (min-width: 992px) and (max-width: 1199.98px) {
+
+		.humanbit-doc {
+
+
+
+		}
+
+	}
+
+	@media (min-width: 1200px) and (max-width: 1399.98px) {
+
+		.humanbit-doc {
+
+
+
+		}
+
+	}
+
+		// ------------------ //
+
+	  ////////////////////////
+	 /* @media (min-width) */
+	////////////////////////
+
+	@media (min-width: 576px) {
+
+		.humanbit-doc {
+
+
+
+		}
+
+	}
+
+	@media (min-width: 768px) {
+
+		.humanbit-doc {
+
+
+
+		}
+
+	}
+
+	@media (min-width: 992px) {
+
+		.humanbit-doc {
+
+
+
+		}
+
+	}
+
+	@media (min-width: 1200px) {
+
+		.humanbit-doc {
+
+
+
+		}
+
+	}
+
+	@media (min-width: 1400px) {
+
+		.humanbit-doc {
+
+
+
+		}
+
+	}
+
+		// ---------------- //
+
+	  //////////////////////
+	 /* mobile landscape */
+	//////////////////////
+
+	@media (max-height: 400px) and (orientation: landscape) {
+
+		.humanbit-doc {
+
+
+
+		}
+
+	}
+
+		// ----------------- //
+
+	  ///////////////////////
+	 /* iPad Pro portrait */
+	///////////////////////
+
+	@media (width: 1024px) and (height: 1366px) {
+
+		.humanbit-doc {
+
+
+
+		}
+
+	}

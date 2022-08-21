@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:spid="https://spid.gov.it/saml-extensions" ID="_681a637-6cd4-434f-92c3-4fed720b2ad8" entityID="https://ecom1.humanbit.com"><ds:Signature>
+<ds:SignedInfo>
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+<ds:Reference URI="#_681a637-6cd4-434f-92c3-4fed720b2ad8">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+<ds:DigestValue>sq9w49CyaVqtz7gyqh7M8uwVGq1og3czvxvHRCAyQaw=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue>
+1U447wGAoV8bsJs87Y/f/x02DP+Hj7KYcv98WvjNbPK0YprfSNjZCBsu1RFNBa+Ds50hZNtQFUC+
+b0KCZO+P9ALWMxb4PoiWIPh8pvDl5aZ7NNAU+8tzQgJXYX2IApSrZwpy9U2uWiFTqFFzsNX3uBtl
+JUQ9rt8TOnAI8r8wGs8byxiMzdJezvd12lS81ZvtYGphxEUD4wZU6Nx6XFUgZtOtfBv3pBwIsSvG
+wXg8u3vy64bqD4aDNqYZBbBMXsYZvOUOfRJJAGBeO+obTw5r164g9IHZ9Nxgz+K/qBWIjK1n+V5k
+bQZ1MXW6kp9GVydLyL36mu2XAR94nAHfWGQPLA==
+</ds:SignatureValue>
+<ds:KeyInfo>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+2vOevvZzgdxa47qJsrmv+gzrG/9sx9KSG3saKGa0GFy9LpejfMsoGp+O/gYgziXFELX/ZB8zpvo4
+WE9Xs88uhWdrTlfGRSpai5OQVhUARhrWSl+d0fndFwtQMpvOTsfW2GD8Qa0zese/K2CSisXNKk8c
+3JorMA2yOZCxZzxhbl7kPWBM8H1Q3zoQxezUJjxTtFJwUHrbkEzQgivOBVmIDKODHTBKFxKMASsZ
+gDyHTQIpyqgzmQ0Iz7/cpzhCVg+SWVL3YWaeMKMt3Q5ZFse0s+VUA+eEYSV1qko6yNZYn/pt4bCA
+8rtaDJntwCbgEFbJSEJq0ZaT0MUBXAVjCV4T7Q==
+</ds:Modulus>
+<ds:Exponent>AQAB</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+<ds:X509Data>
+<ds:X509Certificate>
+MIIDzzCCAregAwIBAgIUVDQ5AbXhHh/e5wjYIvWvWS0fmWIwDQYJKoZIhvcNAQELBQAwdzELMAkG
+A1UEBhMCSVQxDzANBgNVBAgMBk1pbGFubzEPMA0GA1UEBwwGTWlsYW5vMREwDwYDVQQKDAhIdW1h
+bmJpdDERMA8GA1UECwwISHVtYW5iaXQxIDAeBgkqhkiG9w0BCQEWEWluZm9AaHVtYW5iaXQuY29t
+MB4XDTIyMDgxMTA4NDMyOFoXDTIzMDgxMTA4NDMyOFowdzELMAkGA1UEBhMCSVQxDzANBgNVBAgM
+Bk1pbGFubzEPMA0GA1UEBwwGTWlsYW5vMREwDwYDVQQKDAhIdW1hbmJpdDERMA8GA1UECwwISHVt
+YW5iaXQxIDAeBgkqhkiG9w0BCQEWEWluZm9AaHVtYW5iaXQuY29tMIIBIjANBgkqhkiG9w0BAQEF
+AAOCAQ8AMIIBCgKCAQEA2vOevvZzgdxa47qJsrmv+gzrG/9sx9KSG3saKGa0GFy9LpejfMsoGp+O
+/gYgziXFELX/ZB8zpvo4WE9Xs88uhWdrTlfGRSpai5OQVhUARhrWSl+d0fndFwtQMpvOTsfW2GD8
+Qa0zese/K2CSisXNKk8c3JorMA2yOZCxZzxhbl7kPWBM8H1Q3zoQxezUJjxTtFJwUHrbkEzQgivO
+BVmIDKODHTBKFxKMASsZgDyHTQIpyqgzmQ0Iz7/cpzhCVg+SWVL3YWaeMKMt3Q5ZFse0s+VUA+eE
+YSV1qko6yNZYn/pt4bCA8rtaDJntwCbgEFbJSEJq0ZaT0MUBXAVjCV4T7QIDAQABo1MwUTAdBgNV
+HQ4EFgQULOTV/5xajPI9DKaFf2Aqfa/hD1QwHwYDVR0jBBgwFoAULOTV/5xajPI9DKaFf2Aqfa/h
+D1QwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOCAQEAcoLJ6fKzuzALzz0o4q35kGuR
+fdoIqrMwslUvgaWVVtawNQgh64i7l3vW86H6931+B3HeN7j2vIxchIDeNjC6eYRYWEpKC/HJNPaa
+TL1kxlBggNAMdFewcTaF+PU0Psnxmh264KS2rM6wqOZzFuRMVLUFccHOtC6e44jKvtmpn9TTxcwn
+PtogUJmk8AepM4d3b0iUblyf5GS92wVvYTlOAIBgUx8wOwK7hcNMs/sXGT9IxPS4UtAGdl0HcIdm
+iTeRKJGkb0WDJbFOrRU5uS2j2LVRzz56p/Ko7vQU6TTw+3ZFT8Ma0hBvb5GPWjCo+zOfikYQ7cjM
+9QyBRXVjvn5Ecg==
+</ds:X509Certificate>
+</ds:X509Data>
+</ds:KeyInfo>
+</ds:Signature>
+  <md:SPSSODescriptor AuthnRequestsSigned="true" WantAssertionsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+    <md:KeyDescriptor use="signing">
+      <ds:KeyInfo>
+        <ds:X509Data>
+          <ds:X509SubjectName>emailAddress=info@humanbit.com,CN=*.humanbit.it,OU=Spid,O=Humanbit,L=Milano,ST=Milano,C=IT</ds:X509SubjectName>
+          <ds:X509Certificate>
+            MIIDzzCCAregAwIBAgIUVDQ5AbXhHh/e5wjYIvWvWS0fmWIwDQYJKoZIhvcNAQEL
+            BQAwdzELMAkGA1UEBhMCSVQxDzANBgNVBAgMBk1pbGFubzEPMA0GA1UEBwwGTWls
+            YW5vMREwDwYDVQQKDAhIdW1hbmJpdDERMA8GA1UECwwISHVtYW5iaXQxIDAeBgkq
+            hkiG9w0BCQEWEWluZm9AaHVtYW5iaXQuY29tMB4XDTIyMDgxMTA4NDMyOFoXDTIz
+            MDgxMTA4NDMyOFowdzELMAkGA1UEBhMCSVQxDzANBgNVBAgMBk1pbGFubzEPMA0G
+            A1UEBwwGTWlsYW5vMREwDwYDVQQKDAhIdW1hbmJpdDERMA8GA1UECwwISHVtYW5i
+            aXQxIDAeBgkqhkiG9w0BCQEWEWluZm9AaHVtYW5iaXQuY29tMIIBIjANBgkqhkiG
+            9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2vOevvZzgdxa47qJsrmv+gzrG/9sx9KSG3sa
+            KGa0GFy9LpejfMsoGp+O/gYgziXFELX/ZB8zpvo4WE9Xs88uhWdrTlfGRSpai5OQ
+            VhUARhrWSl+d0fndFwtQMpvOTsfW2GD8Qa0zese/K2CSisXNKk8c3JorMA2yOZCx
+            Zzxhbl7kPWBM8H1Q3zoQxezUJjxTtFJwUHrbkEzQgivOBVmIDKODHTBKFxKMASsZ
+            gDyHTQIpyqgzmQ0Iz7/cpzhCVg+SWVL3YWaeMKMt3Q5ZFse0s+VUA+eEYSV1qko6
+            yNZYn/pt4bCA8rtaDJntwCbgEFbJSEJq0ZaT0MUBXAVjCV4T7QIDAQABo1MwUTAd
+            BgNVHQ4EFgQULOTV/5xajPI9DKaFf2Aqfa/hD1QwHwYDVR0jBBgwFoAULOTV/5xa
+            jPI9DKaFf2Aqfa/hD1QwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
+            AQEAcoLJ6fKzuzALzz0o4q35kGuRfdoIqrMwslUvgaWVVtawNQgh64i7l3vW86H6
+            931+B3HeN7j2vIxchIDeNjC6eYRYWEpKC/HJNPaaTL1kxlBggNAMdFewcTaF+PU0
+            Psnxmh264KS2rM6wqOZzFuRMVLUFccHOtC6e44jKvtmpn9TTxcwnPtogUJmk8Aep
+            M4d3b0iUblyf5GS92wVvYTlOAIBgUx8wOwK7hcNMs/sXGT9IxPS4UtAGdl0HcIdm
+            iTeRKJGkb0WDJbFOrRU5uS2j2LVRzz56p/Ko7vQU6TTw+3ZFT8Ma0hBvb5GPWjCo
+            +zOfikYQ7cjM9QyBRXVjvn5Ecg==
+          </ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://ecom1.humanbit.com/spid-test"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://ecom1.humanbit.com/spid-test"/>
+    <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://ecom1.humanbit.com/spid-test" index="0" isDefault="true"/>
+    <md:AttributeConsumingService index="0" isDefault="true">
+      <md:ServiceName xml:lang="en">Spid Humanbit</md:ServiceName>
+      <md:RequestedAttribute Name="fiscalNumber" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic" isRequired="true"/>
+      <md:RequestedAttribute Name="name" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+      <md:RequestedAttribute Name="familyName" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+      <md:RequestedAttribute Name="spidCode" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+      <md:RequestedAttribute Name="gender" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+      <md:RequestedAttribute Name="dateOfBirth" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+      <md:RequestedAttribute Name="countyOfBirth" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+      <md:RequestedAttribute Name="idCard" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+      <md:RequestedAttribute Name="registeredOffice" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+      <md:RequestedAttribute Name="email" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+      <md:RequestedAttribute Name="digitalAddress" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+      <md:RequestedAttribute Name="ivaCode" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+      <md:RequestedAttribute Name="placeOfBirth" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+      <md:RequestedAttribute Name="companyName" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+      <md:RequestedAttribute Name="mobilePhone" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+      <md:RequestedAttribute Name="address" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+      <md:RequestedAttribute Name="expirationDate" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+      </md:AttributeConsumingService>
+  </md:SPSSODescriptor>
+  <md:Organization>
+    <md:OrganizationName xml:lang="it">Humanbit S.r.l</md:OrganizationName>
+    <md:OrganizationDisplayName xml:lang="it">Humanbit</md:OrganizationDisplayName>
+    <md:OrganizationURL xml:lang="it">https://ecom1.humanbit.com</md:OrganizationURL>
+  </md:Organization>
+  <md:ContactPerson contactType="other">
+    <md:Extensions>
+      <spid:VATNumber>IT04021990967</spid:VATNumber>
+      <spid:FiscalCode>IT04021990967</spid:FiscalCode>
+      <spid:Private/>
+    </md:Extensions>
+    <md:EmailAddress>info@humanbit.com</md:EmailAddress>
+    <md:TelephoneNumber>+398472345634785</md:TelephoneNumber>
+  </md:ContactPerson>
+  <md:ContactPerson contactType="billing">
+    <md:Extensions>
+      <fpa:CessionarioCommittente xmlns:fpa="https://spid.gov.it/invoicing-extensions">
+        <fpa:DatiAnagrafici>
+          <fpa:IdFiscaleIVA>
+            <fpa:IdPaese>IT</fpa:IdPaese>
+            <fpa:IdCodice>02468135791</fpa:IdCodice>
+          </fpa:IdFiscaleIVA>
+          <fpa:Anagrafica>
+            <fpa:Denominazione>Humanbit</fpa:Denominazione>
+          </fpa:Anagrafica>
+        </fpa:DatiAnagrafici>
+        <fpa:Sede>
+          <fpa:Indirizzo>Via della Moscova</fpa:Indirizzo>
+          <fpa:NumeroCivico>40</fpa:NumeroCivico>
+          <fpa:CAP>20121</fpa:CAP>
+          <fpa:Comune>Milano</fpa:Comune>
+          <fpa:Provincia>MI</fpa:Provincia>
+          <fpa:Nazione>IT</fpa:Nazione>
+        </fpa:Sede>
+      </fpa:CessionarioCommittente>
+    </md:Extensions>
+    <md:Company>Humanbit</md:Company>
+    <md:EmailAddress>info@humanbit.com</md:EmailAddress>
+    <md:TelephoneNumber>+398472345634785</md:TelephoneNumber>
+  </md:ContactPerson>
+</md:EntityDescriptor>

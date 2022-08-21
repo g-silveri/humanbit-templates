@@ -1,0 +1,93 @@
+{
+  "short_name": "humanbit-template",
+  "name": "humanbit-template-v2",
+  "lang": "it",
+  "description": "template humanbit completo",
+  "start_url": "/",
+  "scope": "/",
+  "background_color": "#ffffff",
+  "theme_color": "#6a3075",
+  "dir": "ltr",
+  "display": "standalone",
+  "orientation": "any",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+     "src": "/favicon/android-icon-192x192.png",
+     "type": "image/png",
+     "sizes": "192x192",
+     "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon/android-icon-144x144.png",
+      "type": "image/png",
+      "sizes": "144x144",
+      "purpose": "any maskable"
+     },
+    {
+     "src": "/favicon/apple-icon-180x180.png",
+     "type": "image/png",
+     "sizes": "180x180"
+    },
+    {
+     "src": "/favicon/apple-icon-152x152.png",
+     "type": "image/png",
+     "sizes": "152x152"
+    },
+    {
+     "src": "/favicon/apple-icon-144x144.png",
+     "type": "image/png",
+     "sizes": "144x144"
+    },
+    {
+     "src": "/favicon/apple-icon-120x120.png",
+     "type": "image/png",
+     "sizes": "120x120"
+    },
+    {
+     "src": "/favicon/apple-icon-114x114.png",
+     "type": "image/png",
+     "sizes": "114x114"
+    },
+    {
+     "src": "/favicon/favicon-96x96.png",
+     "type": "image/png",
+     "sizes": "96x96"
+    },
+    {
+     "src": "/favicon/apple-icon-76x76.png",
+     "type": "image/png",
+     "sizes": "76x76"
+    },
+    {
+     "src": "/favicon/apple-icon-72x72.png",
+     "type": "image/png",
+     "sizes": "72x72"
+    },
+    {
+     "src": "/favicon/apple-icon-60x60.png",
+     "type": "image/png",
+     "sizes": "60x60"
+    },
+    {
+     "src": "/favicon/apple-icon-57x57.png",
+     "type": "image/png",
+     "sizes": "57x57"
+    },
+    {
+     "src": "/favicon/favicon-512x512.png",
+     "type": "image/png",
+     "sizes": "512x512"
+    },
+    {
+     "src": "/favicon/favicon-32x32.png",
+     "type": "image/png",
+     "sizes": "32x32"
+    },
+    {
+     "src": "/favicon/favicon-16x16.png",
+     "type": "image/png",
+     "sizes": "16x16"
+    }
+  ]
+}
